@@ -1,9 +1,9 @@
+import 'taro-ui/dist/style/index.scss'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
-import Index from './pages/index'
+import Main from './pages/main'
 
-import counterStore from './store/counter'
-
+import store from './store'
 import './app.less'
 
 // 如果需要在 h5 环境中开启 React Devtools
@@ -11,10 +11,6 @@ import './app.less'
 // if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
 //   require('nerv-devtools')
 // }
-
-const store = {
-  counterStore
-}
 
 class App extends Component {
   /**
@@ -25,7 +21,7 @@ class App extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    pages: ['pages/index/index'],
+    pages: ['pages/main/index'],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
@@ -47,7 +43,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Index />
+        <Main />
       </Provider>
     )
   }
