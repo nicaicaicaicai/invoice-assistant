@@ -49,7 +49,7 @@ export default class InputInvoice extends Component<Props, State> {
 
   handleDateChange = event => {
     const dateStr = moment(event.detail.value).format('YYYYMMDD')
-    this.fnUpdateState('fbDate', dateStr)
+    this.fnUpdateState('kprq', dateStr)
   }
 
   handleReset = () => {
@@ -57,20 +57,21 @@ export default class InputInvoice extends Component<Props, State> {
   }
 
   handleSubmit = () => {
-    // const values = this.state.value
-    // if (this.fnChecResult(values)) {
-    //   return
-    // }
-    // console.log('===result===', values)
+    if (this.fnChecResult(this.state.value)) {
+      return
+    }
+    let values = {}
+    Object.keys(this.state.value).forEach(key => {
+      values[key] = this.state.value[key].value
+    })
+    console.log('===result===', values)
+
     const param = {
       staffId: 'czo94FiuAM0c00:t6A94FiiX80400',
       captcha: '',
       time: '',
       token: '',
-      fpdm: '032001700312',
-      fphm: '01526151',
-      kprq: '20180926',
-      jym: '122186'
+      ...values
     }
     Fetch.POST(URL_Invoice_Query, param).then((res: InvoiceIF) => {
       this.props.invoiceStore.saveInvoceData(res).then(() => {
@@ -81,11 +82,12 @@ export default class InputInvoice extends Component<Props, State> {
 
   initData = (): InputValue => {
     return {
-      fbdm: { value: '', error: false },
-      fbhm: { value: '', error: false },
-      fbDate: { value: '', error: false },
-      fbMoney: { value: '', error: false },
-      code: { value: '', error: false }
+      fpdm: { value: '', error: false },
+      fphm: { value: '', error: false },
+      kprq: { value: '', error: false },
+      jym: { value: '', error: false }
+      // fbMoney: { value: '', error: false },
+      // code: { value: '', error: false }
     }
   }
 
@@ -100,40 +102,47 @@ export default class InputInvoice extends Component<Props, State> {
   fnGetInputConfig = (): InputIF[] => {
     return [
       {
-        name: 'fbdm',
+        name: 'fpdm',
         title: '发票代码',
         type: 'text',
         placeholder: '请输入10或12位发票代码',
         clear: true
       },
       {
-        name: 'fbhm',
+        name: 'fphm',
         title: '发票号码',
         type: 'text',
         placeholder: '请输入8位发票号码',
         clear: true
       },
       {
-        name: 'fbDate',
+        name: 'kprq',
         title: '日期',
         type: 'text',
         placeholder: '请输入发票日期 例如:20160817',
         clear: false
       },
       {
-        name: 'fbMoney',
-        title: '金额',
-        type: 'number',
-        placeholder: '请输入金额（不含税）',
-        clear: true
-      },
-      {
-        name: 'code',
-        title: '验证码',
+        name: 'jym',
+        title: '校验码',
         type: 'text',
-        placeholder: '验证码',
+        placeholder: '请输入后六位校验码',
         clear: true
       }
+      // {
+      //   name: 'fbMoney',
+      //   title: '金额',
+      //   type: 'number',
+      //   placeholder: '请输入金额（不含税）',
+      //   clear: true
+      // },
+      // {
+      //   name: 'code',
+      //   title: '验证码',
+      //   type: 'text',
+      //   placeholder: '验证码',
+      //   clear: true
+      // }
     ]
   }
 
@@ -150,12 +159,6 @@ export default class InputInvoice extends Component<Props, State> {
   }
 
   render() {
-    return (
-      <AtButton className="at-col at-col-5" formType="submit" type={'primary'} onClick={this.handleSubmit}>
-        提交
-      </AtButton>
-    )
-
     const { inputConfigList, value } = this.state
     return (
       <View className="input_invoice_wrapper">

@@ -46,7 +46,7 @@ export class InvoiceStore {
     return invliceList.map((invoice: InvoiceIF) => {
       return {
         id: invoice.master.id,
-        title: invoice.master.form['E_system_发票主体_购买方名称'] as string,
+        title: invoice.master.form['E_system_发票主体_销售方名称'] as string,
         desc: moment(invoice.master.createTime).format('YYYY-MM-DD'),
         amount: invoice.master.form['E_system_发票主体_价税合计'] as MoneyIF
       }
