@@ -1,8 +1,15 @@
+const isH5 = process.env.CLIENT_ENV === 'h5'
+
+const HOST = '"http://a.ekuaibao.net"'
+
 module.exports = {
   env: {
-    NODE_ENV: '"development"'
+    NODE_ENV: '"development"',
+    BASE_URL: HOST
   },
-  defineConstants: {},
+  defineConstants: {
+    HOST: isH5 ? '"/api"' : HOST
+  },
   weapp: {
     module: {
       postcss: {
@@ -17,7 +24,16 @@ module.exports = {
   h5: {
     devServer: {
       port: 9900,
-      open: false
+      open: false,
+      proxy: {
+        '/api/': {
+          target: JSON.parse(HOST),
+          pathRewrite: {
+            '^/api/': '/'
+          },
+          changeOrigin: true
+        }
+      }
     }
   }
 }

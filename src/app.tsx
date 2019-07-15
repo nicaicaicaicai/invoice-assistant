@@ -5,6 +5,7 @@ import Main from './pages/main'
 
 import store from './store'
 import './app.less'
+import { login } from './lib/init'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -33,7 +34,9 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    login()
+  }
 
   componentDidShow() {}
 

@@ -13,6 +13,10 @@ export class HomeStore {
   @action getHomeList() {
     return this.homeList
   }
+
+  @action saveInvoceData(data) {
+    this.homeList.push(data)
+  }
 }
 
 export default new HomeStore()

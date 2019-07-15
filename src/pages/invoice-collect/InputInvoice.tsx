@@ -5,9 +5,12 @@
 import Taro, { Component } from '@tarojs/taro'
 import { Picker, View } from '@tarojs/components'
 import { AtInput, AtForm, AtButton } from 'taro-ui'
-import './InputInvoice.less'
 import { ReactText } from 'react'
+import { inject, observer } from '@tarojs/mobx'
 import moment from 'moment'
+import './InputInvoice.less'
+import { InvoiceStore } from '../../store/invoice'
+import Fetch from '../../lib/Fetch'
 
 interface ValueIF {
   value: ReactText
@@ -18,12 +21,18 @@ interface InputValue {
   [key: string]: ValueIF
 }
 
+interface Props {
+  invoiceStore: InvoiceStore
+}
+
 interface State {
   value: InputValue
   inputConfigList: InputIF[]
 }
 
-export default class InputInvoice extends Component<any, State> {
+@inject('homeStore')
+@observer
+export default class InputInvoice extends Component<Props, State> {
   constructor(props) {
     super(props)
     this.state = {
@@ -46,11 +55,24 @@ export default class InputInvoice extends Component<any, State> {
   }
 
   handleSubmit = () => {
-    const values = this.state.value
-    if (this.fnChecResult(values)) {
-      return
+    // const values = this.state.value
+    // if (this.fnChecResult(values)) {
+    //   return
+    // }
+    // console.log('===result===', values)
+    const param = {
+      staffId: 'Z3c94FTwBc0400:0200121420906665',
+      captcha: '',
+      time: '',
+      token: '',
+      fpdm: '032001700312',
+      fphm: '01577056',
+      kprq: '20180925',
+      jym: '920911'
     }
-    console.log('===result===', values)
+    Fetch.POST('/api/v2/invoice/validation/query', param).then(res => {
+      console.log(res)
+    })
   }
 
   initData = (): InputValue => {
@@ -92,7 +114,7 @@ export default class InputInvoice extends Component<any, State> {
         title: '日期',
         type: 'text',
         placeholder: '请输入发票日期 例如:20160817',
-        clear: true
+        clear: false
       },
       {
         name: 'fbMoney',
@@ -124,6 +146,8 @@ export default class InputInvoice extends Component<any, State> {
   }
 
   render() {
+    return null
+
     const { inputConfigList, value } = this.state
     return (
       <View className="input_invoice_wrapper">
