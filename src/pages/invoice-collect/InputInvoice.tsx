@@ -11,6 +11,8 @@ import moment from 'moment'
 import './InputInvoice.less'
 import { InvoiceStore } from '../../store/invoice'
 import Fetch from '../../lib/Fetch'
+import { URL_Invoice_Query } from '../../constants/UrlDefine'
+import { InvoiceIF } from '../../interfaces/InvoiceIF'
 
 interface ValueIF {
   value: ReactText
@@ -30,7 +32,7 @@ interface State {
   inputConfigList: InputIF[]
 }
 
-@inject('homeStore')
+@inject('invoiceStore')
 @observer
 export default class InputInvoice extends Component<Props, State> {
   constructor(props) {
@@ -61,17 +63,19 @@ export default class InputInvoice extends Component<Props, State> {
     // }
     // console.log('===result===', values)
     const param = {
-      staffId: 'Z3c94FTwBc0400:0200121420906665',
+      staffId: 'czo94FiuAM0c00:t6A94FiiX80400',
       captcha: '',
       time: '',
       token: '',
       fpdm: '032001700312',
-      fphm: '01577056',
-      kprq: '20180925',
-      jym: '920911'
+      fphm: '01526151',
+      kprq: '20180926',
+      jym: '122186'
     }
-    Fetch.POST('/api/v2/invoice/validation/query', param).then(res => {
-      console.log(res)
+    Fetch.POST(URL_Invoice_Query, param).then((res: InvoiceIF) => {
+      this.props.invoiceStore.saveInvoceData(res).then(() => {
+        return Taro.navigateBack()
+      })
     })
   }
 
@@ -146,7 +150,11 @@ export default class InputInvoice extends Component<Props, State> {
   }
 
   render() {
-    return null
+    return (
+      <AtButton className="at-col at-col-5" formType="submit" type={'primary'} onClick={this.handleSubmit}>
+        提交
+      </AtButton>
+    )
 
     const { inputConfigList, value } = this.state
     return (

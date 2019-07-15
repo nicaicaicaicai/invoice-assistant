@@ -14,6 +14,6 @@ export function updateUserInfo(userInfo: UserInfo) {
   return updateStorage('userInfo', userInfo)
 }
 
-export function updateStorage(key: string, data = {}) {
+export function updateStorage(key: string, data: any) {
   return Taro.setStorage({ key, data })
 }

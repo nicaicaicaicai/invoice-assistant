@@ -44,7 +44,7 @@ export interface MoneyIF {
 }
 
 interface FormIF {
-  [key: string]: MoneyIF | number | boolean
+  [key: string]: MoneyIF | number | boolean | string
 }
 
 export interface VisibilityIF {
@@ -53,4 +53,11 @@ export interface VisibilityIF {
   roles?: any
   departments?: any
   departmentsIncludeChildren: boolean
+}
+
+export interface HomeInvoiceListIF {
+  id: string
+  title: string
+  desc: string
+  amount: MoneyIF
 }

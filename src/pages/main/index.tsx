@@ -7,26 +7,26 @@ import { View } from '@tarojs/components'
 import { AtList, AtListItem, AtAvatar } from 'taro-ui'
 import { observer, inject } from '@tarojs/mobx'
 import './index.less'
-import { HomeModeIF } from '../../interfaces/HomeIF'
-import { HomeStore } from '../../store'
+import { HomeInvoiceListIF } from '../../interfaces/InvoiceIF'
+import { InvoiceStore } from '../../store'
 import HomeActionSheet from './HomeActionSheet'
 
 interface Props {
-  homeStore?: typeof HomeStore
+  invoiceStore?: typeof InvoiceStore
 }
 
 interface State {
   isOpened: boolean
 }
 
-@inject('homeStore')
+@inject('invoiceStore')
 @observer
 export default class Home extends Component<Props, State> {
   state = {
     isOpened: false
   }
 
-  handleClickItem = (home: HomeModeIF) => {
+  handleClickItem = (home: HomeInvoiceListIF) => {
     console.log(home)
   }
 
@@ -40,22 +40,22 @@ export default class Home extends Component<Props, State> {
   }
 
   render() {
-    if (!this.props.homeStore) {
+    if (!this.props.invoiceStore) {
       return null
     }
     return (
       <View className="home_wrapper">
         <AtList>
-          {this.props.homeStore.homeList.map((home: HomeModeIF, index: number) => {
+          {this.props.invoiceStore.homeList.map((invoice: HomeInvoiceListIF) => {
             return (
               <AtListItem
-                key={home.id || index}
+                key={invoice.id}
                 className="home_list"
-                title={home.title}
-                note={home.desc}
-                extraText={home.amount}
+                title={invoice.title}
+                note={invoice.desc}
+                extraText={invoice.amount.standard}
                 thumb="http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png"
-                onClick={() => this.handleClickItem(home)}
+                onClick={() => this.handleClickItem(invoice)}
               />
             )
           })}
