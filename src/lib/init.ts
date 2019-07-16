@@ -2,10 +2,10 @@
  *  Created by pw on 2019-07-12 15:25.
  */
 
-import Fetch from './Fetch'
+import Fetch from '../dataManager/Fetch'
 import { URL_Login } from '../constants/UrlDefine'
 import { UserLoginIF } from '../interfaces/UserInofIF'
-import { updateUserInfo } from '../lib/AIStore'
+import { updateUserInfo } from '../dataManager/AIStore'
 
 export function login() {
   const phone = '18510916113'

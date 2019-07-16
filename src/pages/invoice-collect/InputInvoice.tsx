@@ -10,7 +10,7 @@ import { inject, observer } from '@tarojs/mobx'
 import moment from 'moment'
 import './InputInvoice.less'
 import { InvoiceStore } from '../../store/invoice'
-import Fetch from '../../lib/Fetch'
+import Fetch from '../../dataManager/Fetch'
 import { URL_Invoice_Query } from '../../constants/UrlDefine'
 import { InvoiceIF } from '../../interfaces/InvoiceIF'
 

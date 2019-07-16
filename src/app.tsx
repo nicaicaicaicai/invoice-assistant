@@ -24,7 +24,9 @@ class App extends Component {
   config: Config = {
     pages: [
       'pages/main/index',
-      'pages/invoice-collect/InputInvoice' //手输发票
+      'pages/invoice-collect/InputInvoice', //手输发票
+      'pages/invoice-collect/ScanInvoice', //扫描发票
+      'pages/invoice-collect/SelectInvoiceImage' //发票照片
     ],
     window: {
       backgroundTextStyle: 'light',

@@ -3,7 +3,7 @@
  */
 import { observable, action } from 'mobx'
 import { InvoiceIF, MoneyIF, HomeInvoiceListIF } from '../interfaces/InvoiceIF'
-import { getStorage, updateStorage } from '../lib/AIStore'
+import { getStorage, updateStorage } from '../dataManager/AIStore'
 import moment from 'moment'
 const key = 'invoice_list'
 

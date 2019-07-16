@@ -86,7 +86,7 @@ const Fetch = function(_url, params, config, method) {
 }
 
 function buildOptions(url: string) {
-  url += '?corpId=czo94FiuAM0c00'
+  url += '?corpId=ciI8S37EDE0000'
   return { url }
 }
 
@@ -94,7 +94,7 @@ export const POST = (Fetch.POST = function(url, params, config = {}) {
   return Fetch(url, params, config, 'post')
 })
 
-export const GET = (Fetch.GET = function(url, params, config = {}) {
+export const GET = (Fetch.GET = function(url, params?, config = {}) {
   return Fetch(url, params, config, 'get')
 })
 

@@ -56,7 +56,7 @@ const actions: ActionModal[] = [
     actionType: 'scan_invoice',
     title: '扫描发票',
     icon: '',
-    page: 'InputInvoice'
+    page: 'ScanInvoice'
   },
   {
     actionType: 'shoulu',
@@ -68,7 +68,7 @@ const actions: ActionModal[] = [
     actionType: 'invoice_image',
     title: '发票照片',
     icon: '',
-    page: 'InputInvoice'
+    page: 'SelectInvoiceImage'
   },
   {
     actionType: 'ocr',
