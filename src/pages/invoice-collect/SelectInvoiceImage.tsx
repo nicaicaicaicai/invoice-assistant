@@ -5,8 +5,16 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Button } from '@tarojs/components'
 import { getAttachmentToken, getAttachmentUrlByAttachmentKeys, ocrRecognition } from '../../dataManager/Actions'
+import { inject, observer } from '@tarojs/mobx'
+import { InvoiceStore } from '../../store/invoice'
 
-export default class SelectInvoiceImage extends Component {
+interface Props {
+  invoiceStore: InvoiceStore
+}
+
+@inject('invoiceStore')
+@observer
+export default class SelectInvoiceImage extends Component<Props> {
   componentDidMount() {}
 
   fnGenerateFileName = () => {
@@ -17,6 +25,7 @@ export default class SelectInvoiceImage extends Component {
 
   handleUpload = () => {
     const name = this.fnGenerateFileName()
+    const _this = this
     Taro.chooseImage({
       success: function(res) {
         getAttachmentToken().then((result: AttacmentResponseIF) => {
@@ -42,8 +51,16 @@ export default class SelectInvoiceImage extends Component {
                       staffId: 'ciI8S37EDE0000:Ql08S2Ve1Y4w00'
                     })
                   })
-                  Promise.all(promises).then(invoiceResult => {
-                    console.log(invoiceResult)
+                  Promise.all(promises).then(result => {
+                    let items = []
+                    result.forEach(line => {
+                      // @ts-ignore
+                      items = items.concat(line.items)
+                    })
+                    // @ts-ignore
+                    _this.props.invoiceStore.saveInvoceData(items).then(() => {
+                      return Taro.navigateBack()
+                    })
                   })
                 })
               }

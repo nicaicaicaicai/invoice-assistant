@@ -74,7 +74,7 @@ export default class InputInvoice extends Component<Props, State> {
       ...values
     }
     Fetch.POST(URL_Invoice_Query, param).then((res: InvoiceIF) => {
-      this.props.invoiceStore.saveInvoceData(res).then(() => {
+      this.props.invoiceStore.saveInvoceData([res]).then(() => {
         return Taro.navigateBack()
       })
     })
