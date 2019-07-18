@@ -7,6 +7,8 @@ import { View, Button } from '@tarojs/components'
 import { getAttachmentToken, getAttachmentUrlByAttachmentKeys, ocrRecognition } from '../../dataManager/Actions'
 import { inject, observer } from '@tarojs/mobx'
 import { InvoiceStore } from '../../store/invoice'
+import { USER_ID } from '../../constants/UserInfo'
+import { AttachmentUrlItem } from '../../interfaces/InvoiceIF'
 
 interface Props {
   invoiceStore: InvoiceStore
@@ -26,7 +28,7 @@ export default class OCRInvoice extends Component<Props> {
   handleUpload = () => {
     const name = this.fnGenerateFileName()
     const _this = this
-    Taro.chooseImage({
+    return Taro.chooseImage({
       success: function(res) {
         getAttachmentToken().then((result: AttacmentResponseIF) => {
           const token = result.value.token
@@ -42,27 +44,36 @@ export default class OCRInvoice extends Component<Props> {
             success: function(res) {
               if (res.statusCode === 200) {
                 const data = JSON.parse(res.data)
-                getAttachmentUrlByAttachmentKeys([{ key: data.key }]).then((result: AttachmentUrlResponse) => {
-                  console.log(result)
-                  const promises = result.items.map(item => {
-                    return ocrRecognition({
-                      fileName: item.key,
-                      fileUrl: item.url,
-                      staffId: 'ciI8S37EDE0000:Ql08S2Ve1Y4w00'
+                getAttachmentUrlByAttachmentKeys([{ key: data.key }]).then(
+                  (attachmentResult: AttachmentUrlResponse) => {
+                    console.log(attachmentResult)
+                    const promises = attachmentResult.items.map(item => {
+                      return ocrRecognition({
+                        fileName: item.key,
+                        fileUrl: item.url,
+                        staffId: USER_ID
+                      })
                     })
-                  })
-                  Promise.all(promises).then(result => {
-                    let items = []
-                    result.forEach(line => {
+                    Promise.all(promises).then(invoiceResult => {
+                      let items = []
+                      attachmentResult.items.forEach((attachment, index) => {
+                        const line = invoiceResult[index]
+                        // @ts-ignore
+                        line.items = line.items.map(item => {
+                          return { ...item, attachment }
+                        })
+                      })
+                      invoiceResult.forEach(line => {
+                        // @ts-ignore
+                        items = items.concat(line.items)
+                      })
                       // @ts-ignore
-                      items = items.concat(line.items)
+                      _this.props.invoiceStore.saveInvoceData(items).then(() => {
+                        return Taro.navigateBack()
+                      })
                     })
-                    // @ts-ignore
-                    _this.props.invoiceStore.saveInvoceData(items).then(() => {
-                      return Taro.navigateBack()
-                    })
-                  })
-                })
+                  }
+                )
               }
             }
           })
@@ -89,13 +100,6 @@ interface AttacmentResponseIF {
 
 interface AttachmentValueIF {
   token: string
-}
-
-export interface AttachmentUrlItem {
-  id: string
-  key: string
-  url: string
-  thumbUrl: string
 }
 
 export interface AttachmentUrlResponse {

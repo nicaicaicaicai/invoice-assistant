@@ -1,0 +1,97 @@
+@import '../../styles/ai-color';
+
+.home_card {
+  padding: 20px 20px 0;
+  .home_card_wrapper {
+    padding: 8px 14px;
+    min-height: 140px;
+    box-shadow: 0px 1px 8px 0px rgba(29, 43, 61, 0.15);
+    border-radius: 8px;
+    .card_top_view {
+      .tag {
+        padding: 8px 16px;
+        background: rgba(211, 123, 69, 0.1);
+        color: rgba(211, 123, 69, 1);
+        font-size: 12px;
+        font-weight: 400;
+        border-radius: 8px;
+      }
+    }
+    .content_view {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 16px;
+      .img {
+        width: 80px;
+        height: 80px;
+        border-radius: 4px;
+      }
+      .right {
+        margin-left: 16px;
+        display: flex;
+        flex-direction: column;
+        .title {
+          font-size: 28px;
+          font-weight: 600;
+          color: rgba(29, 43, 61, 1);
+          line-height: 24px;
+        }
+        .desc {
+          margin-top: 18px;
+          font-size: 22px;
+          font-weight: 400;
+          color: rgba(29, 43, 61, 0.5);
+          line-height: 22px;
+        }
+      }
+    }
+
+    .addition_view {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      .addition_row {
+        .addition_row_content {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .row_text {
+            font-size: 22px;
+            font-weight: 400;
+            color: rgba(29, 43, 61, 0.5);
+            line-height: 22px;
+          }
+        }
+        .dotted_line {
+          margin-top: 24px;
+          margin-bottom: 16px;
+          border-bottom: 2px dashed #e6e6e6;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .bottom_view {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .total_amount_label {
+        font-size: 28px;
+        font-weight: 400;
+        color: rgba(29, 43, 61, 0.5);
+        line-height: 22px;
+      }
+      .total_amount {
+        font-size: 32px;
+        font-weight: 600;
+        color: rgba(29, 43, 61, 1);
+        line-height: 24px;
+      }
+    }
+  }
+}

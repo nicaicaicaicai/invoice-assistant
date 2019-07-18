@@ -8,6 +8,7 @@ export interface InvoiceIF {
   message: string
   status: string
   ischeck: boolean
+  attachment?: AttachmentUrlItem
 }
 
 export interface InvoiceDetail {
@@ -60,4 +61,13 @@ export interface HomeInvoiceListIF {
   title: string
   desc?: string
   amount?: MoneyIF
+  tag?: string
+  url?: string
+}
+
+export interface AttachmentUrlItem {
+  id: string
+  key: string
+  url: string
+  thumbUrl: string
 }

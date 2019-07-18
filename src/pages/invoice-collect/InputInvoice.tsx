@@ -13,6 +13,7 @@ import { InvoiceStore } from '../../store/invoice'
 import Fetch from '../../dataManager/Fetch'
 import { URL_Invoice_Query } from '../../constants/UrlDefine'
 import { InvoiceIF } from '../../interfaces/InvoiceIF'
+import { USER_ID } from '../../constants/UserInfo'
 
 interface ValueIF {
   value: ReactText
@@ -67,7 +68,7 @@ export default class InputInvoice extends Component<Props, State> {
     console.log('===result===', values)
 
     const param = {
-      staffId: 'czo94FiuAM0c00:t6A94FiiX80400',
+      staffId: USER_ID,
       captcha: '',
       time: '',
       token: '',

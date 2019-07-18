@@ -4,13 +4,14 @@
 
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { AtList, AtListItem } from 'taro-ui'
+import { AtList } from 'taro-ui'
 import { observer, inject } from '@tarojs/mobx'
 import './index.less'
 import { HomeInvoiceListIF } from '../../interfaces/InvoiceIF'
 import { InvoiceStore } from '../../store'
 import HomeActionSheet from './HomeActionSheet'
 import AIIcon from '../../components/AIIcon'
+import HomeCard from './HomeCard'
 
 interface Props {
   invoiceStore?: typeof InvoiceStore
@@ -47,18 +48,8 @@ export default class Home extends Component<Props, State> {
     return (
       <View className="home_wrapper">
         <AtList>
-          {this.props.invoiceStore.homeList.map((invoice: HomeInvoiceListIF) => {
-            return (
-              <AtListItem
-                key={invoice.id}
-                className="home_list"
-                title={invoice.title}
-                note={invoice.desc}
-                extraText={invoice.amount!.standard}
-                thumb="http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png"
-                onClick={() => this.handleClickItem(invoice)}
-              />
-            )
+          {this.props.invoiceStore.homeList.map((homeModel: HomeInvoiceListIF) => {
+            return <HomeCard key={homeModel.id} homeModel={homeModel} />
           })}
         </AtList>
         <View className="add_button" onClick={this.handleActionSheet}>
@@ -69,3 +60,15 @@ export default class Home extends Component<Props, State> {
     )
   }
 }
+
+/*
+<AtListItem
+                key={invoice.id}
+                className="home_list"
+                title={invoice.title}
+                note={invoice.desc}
+                extraText={invoice.amount!.standard}
+                thumb="http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png"
+                onClick={() => this.handleClickItem(invoice)}
+              />
+ */
