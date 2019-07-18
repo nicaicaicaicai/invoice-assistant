@@ -26,7 +26,7 @@ class App extends Component {
       'pages/main/index',
       'pages/invoice-collect/InputInvoice', //手输发票
       'pages/invoice-collect/ScanInvoice', //扫描发票
-      'pages/invoice-collect/SelectInvoiceImage' //发票照片
+      'pages/invoice-collect/OCRInvoice' //OCR
     ],
     window: {
       backgroundTextStyle: 'light',

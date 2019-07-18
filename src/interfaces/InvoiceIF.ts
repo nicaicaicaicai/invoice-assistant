@@ -58,6 +58,6 @@ export interface VisibilityIF {
 export interface HomeInvoiceListIF {
   id: string
   title: string
-  desc: string
-  amount: MoneyIF
+  desc?: string
+  amount?: MoneyIF
 }

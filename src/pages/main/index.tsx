@@ -4,12 +4,13 @@
 
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { AtList, AtListItem, AtAvatar } from 'taro-ui'
+import { AtList, AtListItem } from 'taro-ui'
 import { observer, inject } from '@tarojs/mobx'
 import './index.less'
 import { HomeInvoiceListIF } from '../../interfaces/InvoiceIF'
 import { InvoiceStore } from '../../store'
 import HomeActionSheet from './HomeActionSheet'
+import AIIcon from '../../components/AIIcon'
 
 interface Props {
   invoiceStore?: typeof InvoiceStore
@@ -53,15 +54,15 @@ export default class Home extends Component<Props, State> {
                 className="home_list"
                 title={invoice.title}
                 note={invoice.desc}
-                extraText={invoice.amount.standard}
+                extraText={invoice.amount!.standard}
                 thumb="http://img12.360buyimg.com/jdphoto/s72x72_jfs/t10660/330/203667368/1672/801735d7/59c85643N31e68303.png"
                 onClick={() => this.handleClickItem(invoice)}
               />
             )
           })}
         </AtList>
-        <View onClick={this.handleActionSheet}>
-          <AtAvatar className="avatar" circle text="ADD" />
+        <View className="add_button" onClick={this.handleActionSheet}>
+          <AIIcon className="icon" name="#EDico-plus-default" />
         </View>
         <HomeActionSheet isOpened={this.state.isOpened} onAction={type => this.handleActionClick(type)} />
       </View>

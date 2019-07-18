@@ -1,12 +1,28 @@
+@import '../../styles/ai-color';
+
 .home_wrapper {
   height: 100%;
   position: relative;
   .home_list {
     padding-bottom: 40px;
   }
-  .avatar {
-    position: absolute;
-    bottom: 40px;
-    left: 43%;
+  .add_button {
+    position: fixed;
+    display: flex;
+    width: 112px;
+    height: 112px;
+    background: @primary-6;
+    border-radius: 50%;
+    bottom: 148px;
+    right: 32px;
+    z-index: 1;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      width: 64px;
+      height: 64px;
+      fill: #ffffff;
+    }
   }
 }

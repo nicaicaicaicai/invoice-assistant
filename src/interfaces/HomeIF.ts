@@ -4,6 +4,6 @@
 export interface HomeModeIF {
   id: string
   title: string
-  desc: string
-  amount: string
+  desc?: string
+  amount?: string
 }

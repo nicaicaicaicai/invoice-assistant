@@ -2,9 +2,9 @@
  *  Created by pw on 2019-07-11 16:49.
  */
 import { observable, action } from 'mobx'
-import { InvoiceIF, MoneyIF, HomeInvoiceListIF, InvoiceDetail } from '../interfaces/InvoiceIF'
+import { InvoiceIF, HomeInvoiceListIF } from '../interfaces/InvoiceIF'
 import { getStorage, updateStorage } from '../dataManager/AIStore'
-import moment from 'moment'
+import { formatInvoice } from '../lib/InvoiceFormat'
 const key = 'invoice_list'
 
 export class InvoiceStore {
@@ -44,21 +44,8 @@ export class InvoiceStore {
 
   fnFormatInvoceToHomeList(invliceList) {
     return invliceList.map((invoice: InvoiceIF) => {
-      return {
-        id: invoice.master.id,
-        title: invoice.master.form['E_system_发票主体_销售方名称'] as string,
-        desc: moment(invoice.master.createTime).format('YYYY-MM-DD'),
-        amount: InvoiceStore.fnGetMoney(invoice.master)
-      }
+      return formatInvoice(invoice)
     })
-  }
-
-  static fnGetMoney(master: InvoiceDetail): MoneyIF {
-    const { entityId } = master
-    if (entityId === 'system_发票主体') {
-      return (master.form[`E_${entityId}_价税合计`] || master.form[`E_${entityId}_发票金额`]) as MoneyIF
-    }
-    return master.form[`E_${entityId}_金额`] as MoneyIF
   }
 }
 

@@ -14,7 +14,7 @@ interface Props {
 
 @inject('invoiceStore')
 @observer
-export default class SelectInvoiceImage extends Component<Props> {
+export default class OCRInvoice extends Component<Props> {
   componentDidMount() {}
 
   fnGenerateFileName = () => {
