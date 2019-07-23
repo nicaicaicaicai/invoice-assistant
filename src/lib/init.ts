@@ -5,25 +5,15 @@ import Fetch from '../dataManager/FetchTaro'
 import { URL_Login } from '../constants/UrlDefine'
 import { UserLoginIF } from '../interfaces/UserInofIF'
 import { updateUserInfo } from '../dataManager/AIStore'
+import { PHONE, PWD } from '../constants/DevConfig'
 
 export function login() {
-  const phone = '18510916113'
-  const pwd = '123456'
   const data = {
-    fullPhone: '86-' + phone,
-    password: pwd,
+    fullPhone: '86-' + PHONE,
+    password: PWD,
     deviceId: '5D52DA7F-1E54-4052-AFD5-1BA089CF0909',
     deviceType: 'MOBILE'
   }
-
-  // Taro.request({
-  //   url: URL_Login,
-  //   method: 'POST',
-  //   data,
-  //   header: {
-  //     'content-type': 'application/json'
-  //   }
-  // }).then(res => console.log(res))
 
   return Fetch.POST(URL_Login, data).then((res: UserLoginIF) => {
     // window.token = res.token

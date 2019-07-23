@@ -3,7 +3,7 @@
  */
 import Taro from '@tarojs/taro'
 import { getToken } from './AIStore'
-import { CORPID } from '../constants/UserInfo'
+import { CORPID } from '../constants/DevConfig'
 
 const Fetch = function(_url, params, config, method) {
   return new Promise((resolve, reject) => {

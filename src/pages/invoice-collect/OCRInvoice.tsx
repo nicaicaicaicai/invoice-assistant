@@ -7,7 +7,7 @@ import { View, Button } from '@tarojs/components'
 import { getAttachmentToken, getAttachmentUrlByAttachmentKeys, ocrRecognition } from '../../dataManager/Actions'
 import { inject, observer } from '@tarojs/mobx'
 import { InvoiceStore } from '../../store/invoice'
-import { USER_ID } from '../../constants/UserInfo'
+import { USER_ID } from '../../constants/DevConfig'
 import { AttachmentUrlItem } from '../../interfaces/InvoiceIF'
 
 interface Props {

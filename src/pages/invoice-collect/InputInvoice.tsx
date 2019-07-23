@@ -13,7 +13,7 @@ import { InvoiceStore } from '../../store/invoice'
 import Fetch from '../../dataManager/FetchTaro'
 import { URL_Invoice_Query } from '../../constants/UrlDefine'
 import { InvoiceIF } from '../../interfaces/InvoiceIF'
-import { USER_ID } from '../../constants/UserInfo'
+import { USER_ID } from '../../constants/DevConfig'
 
 interface ValueIF {
   value: ReactText
