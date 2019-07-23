@@ -1,13 +1,20 @@
 {
-  "miniprogramRoot": "./dist",
-  "projectname": "invoice-assistant",
-  "description": "发票小助手",
-  "appid": "touristappid",
-  "setting": {
-    "urlCheck": true,
-    "es6": false,
-    "postcss": false,
-    "minified": false
-  },
-  "compileType": "miniprogram"
+	"miniprogramRoot": "dist/",
+	"projectname": "invoice-assistant",
+	"description": "发票小助手",
+	"appid": "wx5d33077db79907cd",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"libVersion": "2.7.7",
+	"condition": {}
 }

@@ -17,3 +17,10 @@ export function updateUserInfo(userInfo: UserInfo) {
 export function updateStorage(key: string, data: any) {
   return Taro.setStorage({ key, data })
 }
+
+export function getToken() {
+  return getStorage('userInfo').then(value => {
+    // @ts-ignore
+    return value.token
+  })
+}

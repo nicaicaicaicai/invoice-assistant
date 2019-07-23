@@ -3,7 +3,7 @@
  */
 
 import Taro, { Component } from '@tarojs/taro'
-import '../assets/IconFont/iconfont'
+import { AtIcon } from 'taro-ui'
 
 interface Props {
   name: string
@@ -22,9 +22,10 @@ export default class AIIcon extends Component<Props> {
     let { name, className = '', style = {} } = this.props
 
     return (
-      <svg className={`icon ${className}`} style={style} aria-hidden="true" onClick={this.handleOnClick}>
-        <use xlinkHref={name} />
-      </svg>
+      <AtIcon prefixClass="icon" className={className} customStyle={style} value={name} size="30" color="#F00" />
+      // <svg className={`icon ${className}`} style={style} aria-hidden="true" onClick={this.handleOnClick}>
+      //   <use xlinkHref={name} />
+      // </svg>
     )
   }
 }

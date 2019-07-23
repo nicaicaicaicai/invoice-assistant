@@ -2,7 +2,7 @@
  *  Created by pw on 2019-07-16 14:43.
  */
 import * as url from '../constants/UrlDefine'
-import Fetch from './Fetch'
+import Fetch from './FetchTaro'
 
 export function getAttachmentToken() {
   return Fetch.GET(url.URL_Attacment_Upload_Token)

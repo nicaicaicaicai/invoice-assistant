@@ -1,4 +1,5 @@
 import 'taro-ui/dist/style/index.scss'
+import './assets/IconFont/iconfont.css'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
 import Main from './pages/main'

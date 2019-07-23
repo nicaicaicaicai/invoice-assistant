@@ -1,5 +1,3 @@
-export const HOST = '"http://a.ekuaibao.net"'
-
 module.exports = {
   env: {
     NODE_ENV: '"production"'
