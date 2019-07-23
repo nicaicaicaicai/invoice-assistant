@@ -10,6 +10,8 @@ interface Props {
   className?: string
   style?: any
   onClick?: () => void
+  size?: number
+  color?: string
 }
 
 export default class AIIcon extends Component<Props> {
@@ -19,13 +21,17 @@ export default class AIIcon extends Component<Props> {
   }
 
   render() {
-    let { name, className = '', style = {} } = this.props
-
+    let { name, className = '', style = {}, size, color } = this.props
     return (
-      <AtIcon prefixClass="icon" className={className} customStyle={style} value={name} size="30" color="#F00" />
-      // <svg className={`icon ${className}`} style={style} aria-hidden="true" onClick={this.handleOnClick}>
-      //   <use xlinkHref={name} />
-      // </svg>
+      <AtIcon
+        prefixClass="EDico"
+        className={className}
+        customStyle={style}
+        value={name}
+        color={color}
+        size={size}
+        onClick={this.handleOnClick}
+      />
     )
   }
 }

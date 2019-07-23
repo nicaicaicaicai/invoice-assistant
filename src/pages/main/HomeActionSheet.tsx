@@ -33,7 +33,7 @@ export default class HomeActionSheet extends Component<Props> {
           return (
             <AtActionSheetItem key={action.actionType} onClick={() => this.handleClick(action)}>
               <View className="home_action_sheet_row">
-                <AIIcon className="icon" name={action.icon} style={action.style} />
+                <AIIcon className="sheet_icon" name={action.icon} size={20} color={action.style.fill} />
                 <Text className="home_action_sheet_row_title">{action.title}</Text>
               </View>
             </AtActionSheetItem>
@@ -56,7 +56,7 @@ const actions: ActionModal[] = [
   {
     actionType: 'scan_invoice',
     title: '扫描发票',
-    icon: '#EDico-scan1',
+    icon: 'scan1',
     page: 'ScanInvoice',
     style: {
       fill: '#a1dc63'
@@ -65,7 +65,7 @@ const actions: ActionModal[] = [
   {
     actionType: 'shoulu',
     title: '手录发票',
-    icon: '#EDico-input',
+    icon: 'input',
     page: 'InputInvoice',
     style: {
       fill: '#48ADE7'
@@ -74,7 +74,7 @@ const actions: ActionModal[] = [
   {
     actionType: 'ocr',
     title: '智能拍票',
-    icon: '#EDico-photo-ai',
+    icon: 'photo-ai',
     page: 'OCRInvoice',
     style: {
       fill: '#FA962A'

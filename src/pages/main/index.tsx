@@ -53,7 +53,7 @@ export default class Home extends Component<Props, State> {
           })}
         </AtList>
         <View className="add_button" onClick={this.handleActionSheet}>
-          <AIIcon className="icon" name="#EDico-plus-default" />
+          <AIIcon className="icon" name="plus-default" size={30} color={'white'} />
         </View>
         <HomeActionSheet isOpened={this.state.isOpened} onAction={type => this.handleActionClick(type)} />
       </View>
