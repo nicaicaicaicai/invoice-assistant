@@ -11,7 +11,7 @@ import { HomeInvoiceListIF } from '../../interfaces/InvoiceIF'
 import { InvoiceStore } from '../../store'
 import HomeActionSheet from './HomeActionSheet'
 import AIIcon from '../../components/AIIcon'
-import HomeCard from './HomeCard'
+import HomeCard from '../../components/HomeCard'
 
 interface Props {
   invoiceStore?: typeof InvoiceStore

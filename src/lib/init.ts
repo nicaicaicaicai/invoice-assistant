@@ -16,7 +16,6 @@ export function login() {
   }
 
   return Fetch.POST(URL_Login, data).then((res: UserLoginIF) => {
-    // window.token = res.token
     return updateUserInfo({
       userId: res.userId,
       token: res.token

@@ -71,3 +71,12 @@ export interface AttachmentUrlItem {
   url: string
   thumbUrl: string
 }
+
+export interface OCRUploadIF {
+  id: string
+  isUpload: boolean
+  isRecognition: boolean
+  isFinsh: boolean
+  path: string
+  url?: string
+}

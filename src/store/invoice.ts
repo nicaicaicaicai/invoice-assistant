@@ -22,15 +22,18 @@ export class InvoiceStore {
     })
   }
 
-  @action getInvoice() {
+  @action
+  getInvoice() {
     return this.invliceList
   }
 
-  @action getHomeInvoices() {
+  @action
+  getHomeInvoices() {
     return this.homeList
   }
 
-  @action saveInvoceData(data: InvoiceIF[]) {
+  @action
+  saveInvoceData(data: InvoiceIF[]) {
     this.invliceList = this.invliceList.concat(data)
     this.homeList = this.fnFormatInvoceToHomeList(this.invliceList)
     return getStorage(key).then(value => {
