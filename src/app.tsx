@@ -7,6 +7,7 @@ import Main from './pages/main'
 import store from './store'
 import './app.less'
 import { login } from './lib/init'
+import { BASE_COLOR } from './constants/Constant'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -27,13 +28,35 @@ class App extends Component {
       'pages/main/index',
       'pages/invoice-collect/InputInvoice', //手输发票
       'pages/invoice-collect/ScanInvoice', //扫描发票
-      'pages/invoice-collect/OCRInvoice' //OCR
+      'pages/invoice-collect/OCRInvoice', //OCR
+      'pages/person/index',
+      'pages/person/CompanyInvoceList' //企业开票列表
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      color: '#626567',
+      selectedColor: BASE_COLOR,
+      backgroundColor: '#FBFBFB',
+      borderStyle: 'white',
+      list: [
+        {
+          pagePath: 'pages/main/index',
+          text: '主页',
+          iconPath: './assets/images/tabbar/home.png',
+          selectedIconPath: './assets/images/tabbar/home_focus.png'
+        },
+        {
+          pagePath: 'pages/person/index',
+          text: '个人',
+          iconPath: './assets/images/tabbar/person.png',
+          selectedIconPath: './assets/images/tabbar/person_focus.png'
+        }
+      ]
     }
   }
 

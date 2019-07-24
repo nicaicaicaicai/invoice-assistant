@@ -16,6 +16,10 @@ export function ocrRecognition(param) {
   return Fetch.POST(url.URL_ORC_Recognition, param)
 }
 
+export function getCompanyInfoList() {
+  return Fetch.GET(url.COMPANY_INVOCIE_LIST)
+}
+
 interface KeyIF {
   [key: string]: string
 }
