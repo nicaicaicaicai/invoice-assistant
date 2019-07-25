@@ -32,7 +32,8 @@ class App extends Component {
       'pages/person/index',
       'pages/person/CompanyInvoceList', //企业开票列表
       'pages/person/AddCompanyInvoiceInfo', //添加企业开票列表
-      'pages/person/AddButtonConfig' //添加按钮配置
+      'pages/person/AddButtonConfig', //添加按钮配置
+      'pages/person/About'
     ],
     window: {
       backgroundTextStyle: 'light',
