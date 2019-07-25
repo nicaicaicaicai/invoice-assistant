@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93cbec58-d460-44a8-9cfa-4fe2569f769e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/mine.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/person/AddButtonConfig.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/DevConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/DevConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataManager/Actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataManager/Actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataManager/FetchTaro.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataManager/FetchTaro.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/person/CompanyInvoceList.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/person/CompanyInvoceList.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/person/CompanyInvoceList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/person/CompanyInvoceList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/person/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/person/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/mine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/mine.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,59 +21,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/invoice-collect/OCRInvoice.tsx">
+        <entry file="file://$PROJECT_DIR$/src/pages/person/AddButtonConfig.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" selection-start-line="17" selection-end-line="19" selection-end-column="1" />
-              <folding>
-                <element signature="e#48#94#0" expanded="true" />
-                <element signature="e#2788#3561#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constants/UrlDefine.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/person/CompanyInvoceList.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="275">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="22" />
               <folding>
                 <element signature="e#48#94#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="68" column="23" lean-forward="true" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
-              <folding>
-                <element signature="e#48#94#0" expanded="true" />
-                <element signature="e#2052#2369#0" />
-                <element signature="e#1196#2173#0" />
-                <element signature="e#2186#3327#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/@tarojs/taro/types/index.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="7145" column="28" lean-forward="true" selection-start-line="7145" selection-start-column="28" selection-end-line="7145" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -87,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/mine.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            <state relative-caret-position="379">
+              <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
               <folding>
                 <element signature="e#47#88#0" expanded="true" />
               </folding>
@@ -97,45 +45,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/interfaces/CompanyInvoiceIF.ts">
+        <entry file="file://$PROJECT_DIR$/src/pages/person/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dataManager/Actions.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="28" column="64" lean-forward="true" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
-              <folding>
-                <element signature="e#47#92#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dataManager/FetchTaro.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-              <folding>
-                <element signature="e#47#78#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/invoice-collect/InputInvoice.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="67" selection-end-column="39" />
+            <state relative-caret-position="375">
+              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
               <folding>
                 <element signature="e#48#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="623">
+              <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+              <folding>
+                <element signature="e#48#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/lib/Fetch.ts" />
         <option value="$PROJECT_DIR$/src/pages/invoice-collect/SelectInvoiceImage.tsx" />
         <option value="$PROJECT_DIR$/src/interfaces/HomeIF.ts" />
         <option value="$PROJECT_DIR$/src/styles/ai-color.less" />
@@ -220,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/assets/IconFont/iconfont.css" />
         <option value="$PROJECT_DIR$/src/pages/main/index.less" />
         <option value="$PROJECT_DIR$/src/pages/main/index.tsx" />
-        <option value="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" />
         <option value="$PROJECT_DIR$/.temp/pages/main/HomeActionSheet.less" />
         <option value="$PROJECT_DIR$/src/pages/main/HomeActionSheet.less" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -238,16 +175,18 @@
         <option value="$PROJECT_DIR$/src/interfaces/CompanyInvoiceIF.ts" />
         <option value="$PROJECT_DIR$/src/store/index.ts" />
         <option value="$PROJECT_DIR$/src/pages/person/CompanyInvoceList.less" />
-        <option value="$PROJECT_DIR$/src/app.tsx" />
-        <option value="$PROJECT_DIR$/src/pages/person/index.tsx" />
         <option value="$PROJECT_DIR$/src/constants/UrlDefine.ts" />
         <option value="$PROJECT_DIR$/src/constants/DevConfig.ts" />
         <option value="$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.less" />
         <option value="$PROJECT_DIR$/src/pages/person/CompanyInvoceList.tsx" />
-        <option value="$PROJECT_DIR$/src/store/mine.ts" />
         <option value="$PROJECT_DIR$/src/dataManager/FetchTaro.ts" />
         <option value="$PROJECT_DIR$/src/dataManager/Actions.ts" />
         <option value="$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.tsx" />
+        <option value="$PROJECT_DIR$/src/app.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/person/index.tsx" />
+        <option value="$PROJECT_DIR$/src/store/mine.ts" />
+        <option value="$PROJECT_DIR$/src/pages/person/AddButtonConfig.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" />
       </list>
     </option>
   </component>
@@ -314,7 +253,7 @@
               <item name="invoice-assistant" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="invoice-collect" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="invoice-assistant" type="b2602c69:ProjectViewProjectNode" />
@@ -411,7 +350,7 @@
       <workItem from="1563157110495" duration="17979000" />
       <workItem from="1563197937534" duration="4506000" />
       <workItem from="1563269838629" duration="36172000" />
-      <workItem from="1563787803666" duration="54418000" />
+      <workItem from="1563787803666" duration="59066000" />
     </task>
     <task id="LOCAL-00001" summary="增加homelist">
       <created>1562656620855</created>
@@ -532,17 +471,24 @@
       <option name="project" value="LOCAL" />
       <updated>1563957504287</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="增加企业发票列表---beta2">
+      <created>1564053850156</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1564053850156</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164771000" />
+    <option name="totallyTimeSpent" value="169419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-159" width="2304" height="1296" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13710031" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13710031" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -584,23 +530,10 @@
     <MESSAGE value="修改图标加载问题" />
     <MESSAGE value="修改一下样式问题，可以增加多文件上传" />
     <MESSAGE value="增加企业发票列表---beta" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加企业发票列表---beta" />
+    <MESSAGE value="增加企业发票列表---beta2" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加企业发票列表---beta2" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataManager/Fetch.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="929">
-          <caret line="88" column="17" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/UserInfo.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -632,17 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
-          <folding>
-            <element signature="e#48#94#0" expanded="true" />
-            <element signature="e#1382#1807#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -823,36 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/taro-ui/@types/list.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="926">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/person/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-          <folding>
-            <element signature="e#48#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dataManager/AIStore.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -950,16 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/mine.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-          <folding>
-            <element signature="e#47#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dataManager/FetchTaro.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
@@ -980,22 +862,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@tarojs/taro/types/index.d.ts">
+    <entry file="file://$PROJECT_DIR$/src/app.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="7145" column="28" lean-forward="true" selection-start-line="7145" selection-start-column="28" selection-end-line="7145" selection-end-column="28" />
+        <state relative-caret-position="407">
+          <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="68" column="23" lean-forward="true" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+        <state relative-caret-position="475">
+          <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="1" />
           <folding>
             <element signature="e#48#94#0" expanded="true" />
-            <element signature="e#2052#2369#0" />
-            <element signature="e#1196#2173#0" />
-            <element signature="e#2186#3327#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/person/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#48#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@tarojs/components/types/common.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/taro-ui/@types/list.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/mine.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+          <folding>
+            <element signature="e#47#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@tarojs/taro/types/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="7121" column="13" selection-start-line="7121" selection-start-column="6" selection-end-line="7121" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/person/AddButtonConfig.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="e#48#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding>
+            <element signature="e#48#94#0" expanded="true" />
           </folding>
         </state>
       </provider>

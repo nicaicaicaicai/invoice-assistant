@@ -7,9 +7,9 @@ import { View } from '@tarojs/components'
 import { AtList, AtListItem } from 'taro-ui'
 
 export default class Person extends Component {
-  handleGoCompanyInvoiceInfo = () => {
+  handleListItemClick = url => {
     return Taro.navigateTo({
-      url: '/pages/person/CompanyInvoceList'
+      url
     })
   }
 
@@ -21,12 +21,13 @@ export default class Person extends Component {
             title="企业开票信息"
             arrow="right"
             thumb="https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png"
-            onClick={this.handleGoCompanyInvoiceInfo}
+            onClick={() => this.handleListItemClick('/pages/person/CompanyInvoceList')}
           />
           <AtListItem
-            title="添加顺序"
+            title="添加类型配置"
             arrow="right"
             thumb="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
+            onClick={() => this.handleListItemClick('/pages/person/AddButtonConfig')}
           />
           <AtListItem
             title="关于"

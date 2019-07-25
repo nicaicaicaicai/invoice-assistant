@@ -31,7 +31,8 @@ class App extends Component {
       'pages/invoice-collect/OCRInvoice', //OCR
       'pages/person/index',
       'pages/person/CompanyInvoceList', //企业开票列表
-      'pages/person/AddCompanyInvoiceInfo' //添加企业开票列表
+      'pages/person/AddCompanyInvoiceInfo', //添加企业开票列表
+      'pages/person/AddButtonConfig' //添加按钮配置
     ],
     window: {
       backgroundTextStyle: 'light',

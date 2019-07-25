@@ -6,13 +6,18 @@ import { CompanyInvoiceIF } from '../interfaces/CompanyInvoiceIF'
 import { getStorage, updateStorage } from '../dataManager/AIStore'
 
 const COMPANY_INVOICE_LIST = 'company_invoice_list'
+const ADD_BUTTON_CONFIG = 'add_button_config'
 
 export class MineStore {
   @observable
   companyInvoiceList: CompanyInvoiceIF[]
 
+  @observable
+  addButtonConfig: String[]
+
   constructor() {
     this.companyInvoiceList = []
+    this.addButtonConfig = []
   }
 
   @action
@@ -33,6 +38,21 @@ export class MineStore {
   @action
   getCompanyInvoiceById(id: string): CompanyInvoiceIF {
     return this.companyInvoiceList.find(line => line.id === id) as CompanyInvoiceIF
+  }
+
+  @action
+  getAddButtonConfig() {
+    return getStorage(ADD_BUTTON_CONFIG).then(value => {
+      if (value) {
+        this.addButtonConfig = JSON.parse(value)
+      }
+      return this.addButtonConfig
+    })
+  }
+
+  @action
+  updateAddButtonConfig(list) {
+    return updateStorage(ADD_BUTTON_CONFIG, JSON.stringify(list))
   }
 }
 

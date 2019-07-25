@@ -7,13 +7,30 @@ import { View, Text } from '@tarojs/components'
 import { AtActionSheet, AtActionSheetItem } from 'taro-ui'
 import AIIcon from '../../components/AIIcon'
 import './HomeActionSheet.less'
+import { inject, observer } from '@tarojs/mobx'
+import { MineStore } from '../../store/mine'
 
 interface Props {
   isOpened: boolean
+  mineStore: MineStore
   onAction: (action: string) => void
 }
 
+@inject('mineStore')
+@observer
 export default class HomeActionSheet extends Component<Props> {
+  actions: ActionModal[]
+
+  constructor(props) {
+    super(props)
+    this.actions = actions
+    props.mineStore.getAddButtonConfig().then((configs: string[]) => {
+      if (configs && configs.length) {
+        this.actions = actions.filter(line => !!~configs.indexOf(line.actionType))
+      }
+    })
+  }
+
   handleClick = (action: ActionModal) => {
     this.props.onAction(action.actionType)
     return Taro.navigateTo({
@@ -29,7 +46,7 @@ export default class HomeActionSheet extends Component<Props> {
         cancelText="取消"
         title="请选择添加类型"
       >
-        {actions.map((action: ActionModal) => {
+        {this.actions.map((action: ActionModal) => {
           return (
             <AtActionSheetItem key={action.actionType} onClick={() => this.handleClick(action)}>
               <View className="home_action_sheet_row">
@@ -63,21 +80,21 @@ const actions: ActionModal[] = [
     }
   },
   {
-    actionType: 'shoulu',
-    title: '手录发票',
-    icon: 'input',
-    page: 'InputInvoice',
-    style: {
-      fill: '#48ADE7'
-    }
-  },
-  {
     actionType: 'ocr',
     title: '智能拍票',
     icon: 'photo-ai',
     page: 'OCRInvoice',
     style: {
       fill: '#FA962A'
+    }
+  },
+  {
+    actionType: 'shoulu',
+    title: '手录发票',
+    icon: 'input',
+    page: 'InputInvoice',
+    style: {
+      fill: '#48ADE7'
     }
   }
 ]
