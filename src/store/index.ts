@@ -3,10 +3,12 @@
  */
 import HomeStore from './home'
 import InvoiceStore from './invoice'
+import MineStore from './mine'
 
 export default {
   homeStore: HomeStore,
-  invoiceStore: InvoiceStore
+  invoiceStore: InvoiceStore,
+  mineStore: MineStore
 }
 
-export { HomeStore, InvoiceStore }
+export { HomeStore, InvoiceStore, MineStore }

@@ -20,6 +20,15 @@ export function getCompanyInfoList() {
   return Fetch.GET(url.COMPANY_INVOCIE_LIST)
 }
 
+export function updateCompanyInvoiceInfo(param) {
+  const path = param.id ? `${url.COMPANY_INVOCIE_LIST}/$id` : url.COMPANY_INVOCIE_LIST
+  return param.id ? Fetch.POST(path, param) : Fetch.PUT(url.COMPANY_INVOCIE_LIST, param)
+}
+
+export function deleteCompanyInfoById(id: string) {
+  return Fetch.DELETE(`${url.COMPANY_INVOCIE_LIST}/$id`, { id })
+}
+
 interface KeyIF {
   [key: string]: string
 }

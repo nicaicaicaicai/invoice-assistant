@@ -30,7 +30,8 @@ class App extends Component {
       'pages/invoice-collect/ScanInvoice', //扫描发票
       'pages/invoice-collect/OCRInvoice', //OCR
       'pages/person/index',
-      'pages/person/CompanyInvoceList' //企业开票列表
+      'pages/person/CompanyInvoceList', //企业开票列表
+      'pages/person/AddCompanyInvoiceInfo' //添加企业开票列表
     ],
     window: {
       backgroundTextStyle: 'light',
