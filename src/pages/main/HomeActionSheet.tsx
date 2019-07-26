@@ -12,7 +12,7 @@ import { MineStore } from '../../store/mine'
 
 interface Props {
   isOpened: boolean
-  mineStore: MineStore
+  mineStore?: MineStore
   onAction: (action: string) => void
 }
 
@@ -40,12 +40,7 @@ export default class HomeActionSheet extends Component<Props> {
 
   render() {
     return (
-      <AtActionSheet
-        className="home_action_sheet"
-        isOpened={this.props.isOpened}
-        cancelText="取消"
-        title="请选择添加类型"
-      >
+      <AtActionSheet className="home_action_sheet" isOpened={this.props.isOpened} title="请选择添加类型">
         {this.actions.map((action: ActionModal) => {
           return (
             <AtActionSheetItem key={action.actionType} onClick={() => this.handleClick(action)}>

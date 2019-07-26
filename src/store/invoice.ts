@@ -28,6 +28,11 @@ export class InvoiceStore {
   }
 
   @action
+  getInvoiceById(id: string): InvoiceIF {
+    return this.invliceList.find(line => (line.master.id = id)) as InvoiceIF
+  }
+
+  @action
   getHomeInvoices() {
     return this.homeList
   }

@@ -29,7 +29,9 @@ export default class Home extends Component<Props, State> {
   }
 
   handleClickItem = (home: HomeInvoiceListIF) => {
-    console.log(home)
+    Taro.navigateTo({
+      url: `/pages/invoice-detail/index?id=${home.id}`
+    })
   }
 
   handleActionSheet = () => {
@@ -49,7 +51,7 @@ export default class Home extends Component<Props, State> {
       <View className="home_wrapper">
         <AtList>
           {this.props.invoiceStore.homeList.map((homeModel: HomeInvoiceListIF) => {
-            return <HomeCard key={homeModel.id} homeModel={homeModel} />
+            return <HomeCard key={homeModel.id} homeModel={homeModel} onClickItem={this.handleClickItem} />
           })}
         </AtList>
         <View className="add_button" onClick={this.handleActionSheet}>

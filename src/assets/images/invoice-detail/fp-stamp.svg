@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="32px" viewBox="0 0 60 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="H5-查看发票详情" transform="translate(-157.000000, -88.000000)" fill="#FAD2D2">
+            <g id="Group-3" transform="translate(157.000000, 88.000000)">
+                <path d="M30,32 C13.4314575,32 0,24.836556 0,16 C0,7.163444 13.4314575,0 30,0 C46.5685425,0 60,7.163444 60,16 C60,24.836556 46.5685425,32 30,32 Z M30,30 C45.463973,30 58,23.7319865 58,16 C58,8.2680135 45.463973,2 30,2 C14.536027,2 2,8.2680135 2,16 C2,23.7319865 14.536027,30 30,30 Z M30,28 C15.6405965,28 4,22.627417 4,16 C4,9.372583 15.6405965,4 30,4 C44.3594035,4 56,9.372583 56,16 C56,22.627417 44.3594035,28 30,28 Z M30,27 C43.8071187,27 55,22.0751322 55,16 C55,9.92486775 43.8071187,5 30,5 C16.1928813,5 5,9.92486775 5,16 C5,22.0751322 16.1928813,27 30,27 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -49,6 +49,24 @@ export default class CompanyInvoceList extends Component<Props> {
     )
   }
 
+  renderCompanyBaseInfo = componyInvoiceInfo => {
+    let keys = Object.keys(componyInvoiceInfo)
+    keys = keys.filter(key => !!titleBoxObj[key])
+    return (
+      <View>
+        {keys.map(key => {
+          const label = titleBoxObj[key]
+          return (
+            <View key={key} className="info-line">
+              <span className="info-line-title">{label}</span>
+              <span className="info-line-value">{componyInvoiceInfo[key] || '无'}</span>
+            </View>
+          )
+        })}
+      </View>
+    )
+  }
+
   render() {
     return (
       <View className="company_invoice_list_wrapper">
@@ -65,34 +83,35 @@ export default class CompanyInvoceList extends Component<Props> {
                     </View>
                   </View>
                   <View className="divide-line-top" />
-                  {Object.keys(componyInvoiceInfo).map(key => {
-                    const label = titleBoxObj[key]
-                    if (!!label) {
-                      return (
-                        <View key={key} className="info-line">
-                          <span className="info-line-title">{label}</span>
-                          <span className="info-line-value">{componyInvoiceInfo[key] || '无'}</span>
-                        </View>
-                      )
-                    }
-                    return null
-                  })}
-                  <div className="divide-line-bottom" />
-                  <div className="info-line-remark">
+                  {this.renderCompanyBaseInfo(componyInvoiceInfo)}
+                  {/*{Object.keys(componyInvoiceInfo).map(key => {*/}
+                  {/*const label = titleBoxObj[key]*/}
+                  {/*if (!!label) {*/}
+                  {/*return (*/}
+                  {/*<View key={key} className="info-line">*/}
+                  {/*<span className="info-line-title">{label}</span>*/}
+                  {/*<span className="info-line-value">{componyInvoiceInfo[key] || '无'}</span>*/}
+                  {/*</View>*/}
+                  {/*)*/}
+                  {/*}*/}
+                  {/*return null*/}
+                  {/*})}*/}
+                  <View className="divide-line-bottom" />
+                  <View className="info-line-remark">
                     <span>
-                      <div>{'备注：'}</div>
-                      <div>{componyInvoiceInfo.remark || '无'}</div>
+                      <View>{'备注：'}</View>
+                      <View>{componyInvoiceInfo.remark || '无'}</View>
                     </span>
                     <span>{'备注信息不会被复制'}</span>
-                  </div>
-                  <div className="info-btn-wrapper">
+                  </View>
+                  <View className="info-btn-wrapper">
                     <View className="info-btn info-btn-showCheckBox" onClick={this.handleCopy}>
                       {'复制开票信息'}
                     </View>
                     <View className="info-btn info-btn-qrCode" onClick={this.handleGetQrCode}>
                       {'开票二维码'}
                     </View>
-                  </div>
+                  </View>
                 </View>
               )
             })}

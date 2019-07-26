@@ -29,6 +29,10 @@ export function deleteCompanyInfoById(id: string) {
   return Fetch.DELETE(`${url.COMPANY_INVOCIE_LIST}/$id`, { id })
 }
 
+export function qrInvoice(param) {
+  return Fetch.POST(url.QR_INVOICE_INFO, param)
+}
+
 interface KeyIF {
   [key: string]: string
 }

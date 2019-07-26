@@ -9,6 +9,7 @@ import './HomeCard.less'
 
 interface Props {
   homeModel: HomeInvoiceListIF
+  onClickItem: (item: HomeInvoiceListIF) => void
 }
 
 // class TopView extends Component<Props> {
@@ -77,9 +78,9 @@ interface Props {
 
 export default class HomeCard extends Component<Props> {
   render() {
-    const { homeModel } = this.props
+    const { homeModel, onClickItem } = this.props
     return (
-      <View className="home_card">
+      <View className="home_card" onClick={() => onClickItem(homeModel)}>
         <View className="home_card_wrapper">
           <View className="card_top_view">
             <Text className="tag">{homeModel.tag}</Text>

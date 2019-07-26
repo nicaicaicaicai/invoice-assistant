@@ -16,3 +16,5 @@ export const URL_GET_Attachment = `${host}/api/v1/attachment/attachments`
 export const URL_ORC_Recognition = `${host}/api/v2/invoice/ocr/multiple_items`
 
 export const COMPANY_INVOCIE_LIST = `${host}/api/v1/corporationset/payerinfo`
+
+export const QR_INVOICE_INFO = `${host}/api/v2/invoice/validation/qr`
