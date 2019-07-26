@@ -68,6 +68,9 @@ export default class AddButtonConfig extends Component<Props, State> {
 
   render() {
     const { dataSource } = this.state
+    if (!dataSource) {
+      return null
+    }
     return (
       <View>
         <AtList>

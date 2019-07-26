@@ -23,10 +23,10 @@ export default class HomeActionSheet extends Component<Props> {
 
   constructor(props) {
     super(props)
-    this.actions = actions
+    this.actions = defalutActions
     props.mineStore.getAddButtonConfig().then((configs: string[]) => {
       if (configs && configs.length) {
-        this.actions = actions.filter(line => !!~configs.indexOf(line.actionType))
+        this.actions = defalutActions.filter(line => !!~configs.indexOf(line.actionType))
       }
     })
   }
@@ -69,7 +69,7 @@ interface ActionModal {
   style: Record<string, any>
 }
 
-const actions: ActionModal[] = [
+const defalutActions: ActionModal[] = [
   {
     actionType: 'scan_invoice',
     title: '扫描发票',
