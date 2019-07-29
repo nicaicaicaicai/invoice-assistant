@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93cbec58-d460-44a8-9cfa-4fe2569f769e" name="Default Changelist" comment="首页添加按钮的配置">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/invoice-detail/fp-stamp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/invoice-detail/invoice-payerno-error-big.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/invoice-detail/invoice-payerno-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/invoice-detail/invoice-payerno-warning.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Money.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Money.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/MoneyUtil.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/invoice-detail/FormatInvoiceData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/invoice-detail/InvoiceContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/invoice-detail/InvoiceDetail.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/invoice-detail/PayerInfo.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/invoice-detail/PayerInfo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/invoice-detail/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/invoice-detail/utils.ts" afterDir="false" />
+    <list default="true" id="93cbec58-d460-44a8-9cfa-4fe2569f769e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/UrlDefine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/UrlDefine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataManager/Actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataManager/Actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/invoice-collect/ScanInvoice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/invoice-collect/ScanInvoice.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/main/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/person/CompanyInvoceList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/person/CompanyInvoceList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/invoice-detail/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/invoice-detail/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/invoice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/invoice.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -40,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="115" column="9" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
+            <state relative-caret-position="544">
+              <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
               <folding>
                 <element signature="e#48#94#0" expanded="true" />
               </folding>
@@ -55,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/FormatInvoiceData.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
+            <state relative-caret-position="500">
               <caret line="21" column="33" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="33" />
               <folding>
                 <element signature="e#47#74#0" expanded="true" />
@@ -64,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/store/invoice.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="30" column="16" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="825">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="e#47#88#0" expanded="true" />
               </folding>
@@ -79,7 +56,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/InvoiceDetail.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-404">
+            <state>
               <caret column="30" selection-start-column="30" selection-end-column="30" />
             </state>
           </provider>
@@ -88,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="675">
               <caret line="36" column="33" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="33" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -100,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/main/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state relative-caret-position="488">
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -109,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/HomeCard.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
+            <state relative-caret-position="1925">
               <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
             </state>
           </provider>
@@ -118,7 +95,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="350">
               <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding>
                 <element signature="e#48#94#0" expanded="true" />
@@ -130,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/PayerInfo.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="100">
               <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
             </state>
           </provider>
@@ -139,7 +116,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/InvoiceContainer.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
+            <state relative-caret-position="1250">
               <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
             </state>
           </provider>
@@ -243,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/components/Money.less" />
         <option value="$PROJECT_DIR$/src/components/Money.tsx" />
         <option value="$PROJECT_DIR$/src/pages/invoice-detail/InvoiceContainer.tsx" />
-        <option value="$PROJECT_DIR$/src/store/invoice.ts" />
         <option value="$PROJECT_DIR$/src/app.tsx" />
         <option value="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" />
         <option value="$PROJECT_DIR$/src/components/HomeCard.tsx" />
@@ -252,6 +228,7 @@
         <option value="$PROJECT_DIR$/src/pages/invoice-detail/FormatInvoiceData.ts" />
         <option value="$PROJECT_DIR$/src/pages/invoice-detail/PayerInfo.tsx" />
         <option value="$PROJECT_DIR$/src/pages/invoice-detail/index.tsx" />
+        <option value="$PROJECT_DIR$/src/store/invoice.ts" />
       </list>
     </option>
   </component>
@@ -269,7 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -333,6 +309,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -406,7 +383,8 @@
       <workItem from="1563157110495" duration="17979000" />
       <workItem from="1563197937534" duration="4506000" />
       <workItem from="1563269838629" duration="36172000" />
-      <workItem from="1563787803666" duration="73706000" />
+      <workItem from="1563787803666" duration="74027000" />
+      <workItem from="1564367373933" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="增加homelist">
       <created>1562656620855</created>
@@ -555,16 +533,24 @@
       <option name="project" value="LOCAL" />
       <updated>1564110924283</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="详情页---beta001">
+      <created>1564146377580</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1564146377580</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184059000" />
+    <option name="totallyTimeSpent" value="186335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-159" width="2304" height="1296" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13710031" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13710031" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -578,7 +564,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.41190866" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.41190866" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32952693" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -610,7 +596,8 @@
     <MESSAGE value="首页添加按钮配置" />
     <MESSAGE value="添加关于页" />
     <MESSAGE value="首页添加按钮的配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="首页添加按钮的配置" />
+    <MESSAGE value="详情页---beta001" />
+    <option name="LAST_COMMIT_MESSAGE" value="详情页---beta001" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/pages/invoice-collect/OCRInvoice.less">
@@ -928,67 +915,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/invoice.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="16" />
-          <folding>
-            <element signature="e#47#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding>
-            <element signature="e#48#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomeCard.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/main/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/InvoiceDetail.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-404">
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/InvoiceContainer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/FormatInvoiceData.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
+        <state relative-caret-position="500">
           <caret line="21" column="33" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="33" />
           <folding>
             <element signature="e#47#74#0" expanded="true" />
@@ -996,19 +925,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/InvoiceDetail.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="36" column="33" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HomeCard.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1925">
+          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#48#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/PayerInfo.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="100">
           <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/InvoiceContainer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/main/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="115" column="9" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
+        <state relative-caret-position="544">
+          <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
           <folding>
             <element signature="e#48#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/invoice.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#47#88#0" expanded="true" />
           </folding>
         </state>
       </provider>

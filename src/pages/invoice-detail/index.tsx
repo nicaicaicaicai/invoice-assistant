@@ -46,20 +46,6 @@ export default class InvoiceDetailView extends Component<Props, State> {
     const { type, label, value, isShow } = item
     const InvoiceComponent = componentMap[type] || InvoiceItem
     return <InvoiceComponent key={index} value={value} label={label} isShow={isShow} {...this.props} />
-    // switch (type) {
-    //   case 'separationLine':
-    //     return <SeparationLine key={index} isShow={isShow} />
-    //   case 'money':
-    //     return <InvoiceMoney key={index} value={value} label={label} />
-    //   case 'list':
-    //     // @ts-ignore
-    //     return <InvoiceDetail key={index} value={value} label={label} {...this.props} />
-    //   case 'total':
-    //     // @ts-ignore
-    //     return <TotalView key={index} value={value} label={label} />
-    //   default:
-    //     return <InvoiceItem key={index} value={value} label={label} isShow={isShow} />
-    // }
   }
 
   render() {
