@@ -69,7 +69,11 @@ export function PayerInfoName(props) {
 
 export function PayerInfoNumber(props) {
   const { invoiceDetail, payerInfo, showMessage, title, message, status } = props
-  let payertaxno = invoiceDetail.payertaxno && invoiceDetail.payertaxno.toUpperCase()
+  if (!invoiceDetail) {
+    return null
+  }
+  let payertaxno = invoiceDetail && invoiceDetail.payertaxno && invoiceDetail.payertaxno.toUpperCase()
+
   if (invoiceDetail.payer === '个人') {
     return (
       <div className={'payerinfo-wrapper'}>

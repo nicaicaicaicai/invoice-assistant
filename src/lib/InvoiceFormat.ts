@@ -27,7 +27,7 @@ function formatInvoiceData(invoice: InvoiceIF) {
   const title = form[`E_${entityId}_销售方名称`] as string
   const desc = moment(invoice.master.createTime).format('YYYY-MM-DD') as string
   const amount = (form[`E_${entityId}_价税合计`] as MoneyIF) || (form[`E_${entityId}_发票金额`] as MoneyIF)
-  return { id, title, desc, amount, tag: '增值税发票', url: attachment.thumbUrl }
+  return { id, title, desc, amount, tag: '增值税发票', url: attachment.thumbUrl, entityId }
 }
 
 function formatQuotaInvoice(invoice: InvoiceIF) {
@@ -36,7 +36,7 @@ function formatQuotaInvoice(invoice: InvoiceIF) {
   const title = form[`E_${entityId}_销售方名称`] as string
   const desc = moment(invoice.master.createTime).format('YYYY-MM-DD') as string
   const amount = form[`E_${entityId}_金额`] as MoneyIF
-  return { id, title, desc, amount, tag: '定额发票', url: attachment.thumbUrl }
+  return { id, title, desc, amount, tag: '定额发票', url: attachment.thumbUrl, entityId }
 }
 
 function formatTrain(invoice: InvoiceIF) {
@@ -46,7 +46,7 @@ function formatTrain(invoice: InvoiceIF) {
   const date = getDate(form['E_system_火车票_乘车时间'])
   const desc = `${date} ${form['E_system_火车票_车次']} ${form['E_system_火车票_乘车人姓名']}` as string
   const amount = form[`E_${entityId}_金额`] as MoneyIF
-  return { id, title, desc, amount, tag: '火车票', url: attachment.thumbUrl }
+  return { id, title, desc, amount, tag: '火车票', url: attachment.thumbUrl, entityId }
 }
 
 function formatTaxi(invoice: InvoiceIF) {
@@ -60,7 +60,7 @@ function formatTaxi(invoice: InvoiceIF) {
     ? `出租车发票（${form[`E_${entityId}_发票所在地`]}）`
     : ('出租车发票' as string)
   const amount = form[`E_${entityId}_金额`] as MoneyIF
-  return { id, title, desc, amount, tag: '出租车票', url: attachment.thumbUrl }
+  return { id, title, desc, amount, tag: '出租车票', url: attachment.thumbUrl, entityId }
 }
 
 function formatLoadCost(invoice: InvoiceIF) {
@@ -69,7 +69,7 @@ function formatLoadCost(invoice: InvoiceIF) {
   const title = `${form[`E_${entityId}_入口`]} - ${form[`E_${entityId}_出口`]}` as string
   const desc = getDate(form[`E_${entityId}_时间`]) as string
   const amount = form[`E_${entityId}_金额`] as MoneyIF
-  return { id, title, desc, amount, tag: '过路费票', url: attachment.thumbUrl }
+  return { id, title, desc, amount, tag: '过路费票', url: attachment.thumbUrl, entityId }
 }
 
 function formatFlight(invoice: InvoiceIF) {
@@ -79,7 +79,7 @@ function formatFlight(invoice: InvoiceIF) {
   const date = getDate(form[`E_${entityId}_乘机时间`])
   const desc = `${date} ${form[`E_${entityId}_航班号`]} ${form[`E_${entityId}_乘机人姓名`]}` as string
   const amount = form[`E_${entityId}_金额`] as MoneyIF
-  return { id, title, desc, amount, tag: '机票行程票', url: attachment.thumbUrl }
+  return { id, title, desc, amount, tag: '机票行程票', url: attachment.thumbUrl, entityId }
 }
 
 function formatPassengerTicket(invoice: InvoiceIF) {
@@ -89,7 +89,7 @@ function formatPassengerTicket(invoice: InvoiceIF) {
   const date = getDate(form[`E_${entityId}_时间`])
   const desc = `${date} ${form[`E_${entityId}_姓名`]}` as string
   const amount = form[`E_${entityId}_金额`] as MoneyIF
-  return { id, title, desc, amount, tag: '客运汽车票', url: attachment.thumbUrl }
+  return { id, title, desc, amount, tag: '客运汽车票', url: attachment.thumbUrl, entityId }
 }
 
 function formatOther(invoice: InvoiceIF) {
@@ -97,7 +97,7 @@ function formatOther(invoice: InvoiceIF) {
   const { id, form, entityId } = invoice.master
   const title = `其它`
   const desc = getDate(form[`E_${entityId}_日期`], 'YYYY年MM月DD日')
-  return { id, title, desc, tag: '其它票据', url: attachment.thumbUrl }
+  return { id, title, desc, tag: '其它票据', url: attachment.thumbUrl, entityId }
 }
 
 function getDate(date?: any, format?: string) {

@@ -34,7 +34,8 @@ class App extends Component {
       'pages/person/AddCompanyInvoiceInfo', //添加企业开票列表
       'pages/person/AddButtonConfig', //添加按钮配置
       'pages/person/About',
-      'pages/invoice-detail/index'
+      'pages/invoice-detail/index',
+      'pages/invoice-detail/TicketDetail' //其它票据页面
     ],
     window: {
       backgroundTextStyle: 'light',

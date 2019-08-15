@@ -41,7 +41,7 @@ export interface MoneyIF {
   standardNumCode: string
   standardSymbol: string
   standardUnit: string
-  standardScale: string
+  standardScale: number
 }
 
 interface FormIF {
@@ -59,6 +59,7 @@ export interface VisibilityIF {
 export interface HomeInvoiceListIF {
   id: string
   title: string
+  entityId: string
   desc?: string
   amount?: MoneyIF
   tag?: string

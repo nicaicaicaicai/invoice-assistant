@@ -29,8 +29,12 @@ export default class Home extends Component<Props, State> {
   }
 
   handleClickItem = (home: HomeInvoiceListIF) => {
+    let url = `/pages/invoice-detail/index?id=${home.id}`
+    if (home.entityId !== 'system_发票主体') {
+      url = `/pages/invoice-detail/TicketDetail?id=${home.id}`
+    }
     Taro.navigateTo({
-      url: `/pages/invoice-detail/index?id=${home.id}`
+      url
     })
   }
 

@@ -79,6 +79,9 @@ interface Props {
 export default class HomeCard extends Component<Props> {
   render() {
     const { homeModel, onClickItem } = this.props
+    if (!homeModel) {
+      return null
+    }
     return (
       <View className="home_card" onClick={() => onClickItem(homeModel)}>
         <View className="home_card_wrapper">
