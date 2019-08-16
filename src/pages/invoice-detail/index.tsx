@@ -10,7 +10,7 @@ import SVG_STAMP from '../../assets/images/invoice-detail/fp-stamp.svg'
 import './InvoiceDetail.less'
 import { inject, observer } from '@tarojs/mobx'
 import { InvoiceStore } from '../../store/invoice'
-import { InvoiceIF } from '../../interfaces/InvoiceIF'
+import { InvoiceIF } from '../../types/InvoiceIF'
 
 interface Props {
   invoiceStore: InvoiceStore

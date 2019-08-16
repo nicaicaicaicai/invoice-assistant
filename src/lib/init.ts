@@ -3,7 +3,7 @@
  */
 import Fetch from '../dataManager/FetchTaro'
 import { URL_Login } from '../constants/UrlDefine'
-import { UserLoginIF } from '../interfaces/UserInofIF'
+import { UserLoginIF } from '../types/UserInofIF'
 import { updateUserInfo } from '../dataManager/AIStore'
 import { PHONE, PWD } from '../constants/DevConfig'
 

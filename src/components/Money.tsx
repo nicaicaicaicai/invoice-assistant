@@ -4,7 +4,7 @@
 
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { MoneyIF } from '../interfaces/InvoiceIF'
+import { MoneyIF } from '../types/InvoiceIF'
 import { getAmount, thousandBitSeparator } from '../lib/MoneyUtil'
 import './Money.less'
 

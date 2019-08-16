@@ -7,7 +7,6 @@ import Main from './pages/main'
 import store from './store'
 import './app.less'
 import { login } from './lib/init'
-import { BASE_COLOR } from './constants/Constant'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -39,14 +38,16 @@ class App extends Component {
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
+      navigationBarBackgroundColor: '#2B9AAB',
+      // backgroundColorTop: '#2B9AAB',
+      navigationBarTitleText: '小助手',
+      navigationBarTextStyle: 'white'
+      // navigationStyle: 'custom'
     },
     tabBar: {
-      color: '#626567',
-      selectedColor: BASE_COLOR,
-      backgroundColor: '#FBFBFB',
+      color: '#9490a4',
+      selectedColor: '#1D2B3D',
+      backgroundColor: '#fff',
       borderStyle: 'white',
       list: [
         {

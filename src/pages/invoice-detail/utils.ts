@@ -1,7 +1,7 @@
 /**
  *  Created by pw on 2019-07-26 13:30.
  */
-import { CompanyInvoiceIF } from '../../interfaces/CompanyInvoiceIF'
+import { CompanyInvoiceIF } from '../../types/CompanyInvoiceIF'
 
 export function checkPayerInfo(payerInfo) {
   const payerInfoArr: CompanyInvoiceIF[] = []

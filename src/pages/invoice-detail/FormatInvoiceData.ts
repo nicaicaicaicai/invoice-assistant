@@ -2,7 +2,7 @@
  *  Created by pw on 2019-07-26 14:40.
  */
 import moment from 'moment'
-import { InvoiceDetail } from '../../interfaces/InvoiceIF'
+import { InvoiceDetail } from '../../types/InvoiceIF'
 
 export const INVOICE_TYPE = {
   DIGITAL_NORMAL: '增值税电子普通发票',

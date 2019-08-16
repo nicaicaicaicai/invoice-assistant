@@ -2,7 +2,7 @@
  *  Created by pw on 2019-07-11 16:49.
  */
 import { observable, action } from 'mobx'
-import { InvoiceIF, HomeInvoiceListIF } from '../interfaces/InvoiceIF'
+import { InvoiceIF, HomeInvoiceListIF } from '../types/InvoiceIF'
 import { getStorage, updateStorage } from '../dataManager/AIStore'
 import { formatInvoice } from '../lib/InvoiceFormat'
 const key = 'invoice_list'

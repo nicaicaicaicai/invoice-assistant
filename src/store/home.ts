@@ -3,7 +3,7 @@
  */
 import { observable, action } from 'mobx'
 import testHomeList from '../../test/homeList.json'
-import { HomeModeIF } from '../interfaces/HomeIF'
+import { HomeModeIF } from '../types/HomeIF'
 
 export class HomeStore {
   @observable homeList: HomeModeIF[] = testHomeList

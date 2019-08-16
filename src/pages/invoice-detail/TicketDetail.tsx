@@ -6,7 +6,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components'
 import { inject, observer } from '@tarojs/mobx'
 import { InvoiceStore } from '../../store/invoice'
-import { InvoiceIF, MoneyIF } from '../../interfaces/InvoiceIF'
+import { InvoiceIF, MoneyIF } from '../../types/InvoiceIF'
 import { fieldConfig, IField } from './ticketConfig'
 import './TicketDetail.less'
 

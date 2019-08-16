@@ -10,7 +10,7 @@ import { MineStore } from '../../store/mine'
 import { AtButton, AtForm, AtInput } from 'taro-ui'
 import './AddCompanyInvoiceInfo.less'
 import { updateCompanyInvoiceInfo, getCompanyInfoList, deleteCompanyInfoById } from '../../dataManager/Actions'
-import { CompanyInvoiceIF, CompanyInvoiceRespomseIF } from '../../interfaces/CompanyInvoiceIF'
+import { CompanyInvoiceIF, CompanyInvoiceRespomseIF } from '../../types/CompanyInvoiceIF'
 
 interface ValueIF {
   value: ReactText

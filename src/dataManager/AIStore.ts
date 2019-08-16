@@ -2,7 +2,7 @@
  *  Created by pw on 2019-07-15 12:01.
  */
 import Taro from '@tarojs/taro'
-import { UserInfo } from '../interfaces/UserInofIF'
+import { UserInfo } from '../types/UserInofIF'
 
 export function getStorage(key) {
   return Taro.getStorage({ key })

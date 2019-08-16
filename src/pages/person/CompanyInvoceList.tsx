@@ -6,7 +6,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
 import './CompanyInvoceList.less'
 import { getCompanyInfoList } from '../../dataManager/Actions'
-import { CompanyInvoiceRespomseIF, CompanyInvoiceIF } from '../../interfaces/CompanyInvoiceIF'
+import { CompanyInvoiceRespomseIF, CompanyInvoiceIF } from '../../types/CompanyInvoiceIF'
 import { inject, observer } from '@tarojs/mobx'
 import { MineStore } from '../../store/mine'
 

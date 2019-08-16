@@ -2,7 +2,7 @@
  *  Created by pw on 2019-07-18 10:49.
  */
 import moment from 'moment'
-import { HomeInvoiceListIF, InvoiceIF, MoneyIF, AttachmentUrlItem } from '../interfaces/InvoiceIF'
+import { HomeInvoiceListIF, InvoiceIF, MoneyIF, AttachmentUrlItem } from '../types/InvoiceIF'
 
 export function formatInvoice(invoice: InvoiceIF): HomeInvoiceListIF {
   const { entityId } = invoice.master

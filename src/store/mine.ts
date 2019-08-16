@@ -2,7 +2,7 @@
  *  Created by pw on 2019-07-24 16:39.
  */
 import { observable, action } from 'mobx'
-import { CompanyInvoiceIF } from '../interfaces/CompanyInvoiceIF'
+import { CompanyInvoiceIF } from '../types/CompanyInvoiceIF'
 import { getStorage, updateStorage } from '../dataManager/AIStore'
 
 const COMPANY_INVOICE_LIST = 'company_invoice_list'
