@@ -39,8 +39,12 @@ export default class HomeActionSheet extends Component<Props> {
   }
 
   render() {
+    let title = '请选择添加类型'
+    if (process.env.TARO_ENV === 'weapp') {
+      title = ''
+    }
     return (
-      <AtActionSheet className="home_action_sheet" isOpened={this.props.isOpened} title="请选择添加类型">
+      <AtActionSheet className="home_action_sheet" isOpened={this.props.isOpened} title={title}>
         {this.actions.map((action: ActionModal) => {
           return (
             <AtActionSheetItem key={action.actionType} onClick={() => this.handleClick(action)}>

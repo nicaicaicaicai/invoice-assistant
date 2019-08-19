@@ -6,12 +6,14 @@ import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { AtList } from 'taro-ui'
 import { observer, inject } from '@tarojs/mobx'
+import classnames from 'classnames'
 import './index.less'
 import { HomeInvoiceListIF } from '../../types/InvoiceIF'
 import { InvoiceStore } from '../../store'
 import HomeActionSheet from './HomeActionSheet'
 import AIIcon from '../../components/AIIcon'
 import HomeCard from '../../components/HomeCard'
+import { getHomeAddBottom } from '../../multiport/styleConfig'
 
 interface Props {
   invoiceStore?: typeof InvoiceStore
@@ -51,14 +53,21 @@ export default class Home extends Component<Props, State> {
     if (!this.props.invoiceStore) {
       return null
     }
+    const bottom = getHomeAddBottom()
     return (
       <View className="home_wrapper">
-        <AtList>
-          {this.props.invoiceStore.homeList.map((homeModel: HomeInvoiceListIF) => {
-            return <HomeCard key={homeModel.id} homeModel={homeModel} onClickItem={this.handleClickItem} />
+        <View
+          className={classnames({
+            home_list: this.props.invoiceStore.homeList.length
           })}
-        </AtList>
-        <View className="add_button" onClick={this.handleActionSheet}>
+        >
+          <AtList>
+            {this.props.invoiceStore.homeList.map((homeModel: HomeInvoiceListIF) => {
+              return <HomeCard key={homeModel.id} homeModel={homeModel} onClickItem={this.handleClickItem} />
+            })}
+          </AtList>
+        </View>
+        <View className="add_button" style={{ bottom: `${bottom}px` }} onClick={this.handleActionSheet}>
           <AIIcon className="icon" name="plus-default" size={30} color={'white'} />
         </View>
         <HomeActionSheet isOpened={this.state.isOpened} onAction={type => this.handleActionClick(type)} />

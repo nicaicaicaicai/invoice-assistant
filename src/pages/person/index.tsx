@@ -6,6 +6,7 @@ import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { AtList, AtListItem } from 'taro-ui'
 import UserInfoView from './UserInfo'
+import './index.less'
 
 export default class Person extends Component {
   handleListItemClick = url => {
@@ -16,7 +17,7 @@ export default class Person extends Component {
 
   render() {
     return (
-      <View>
+      <View className="person_wrapper">
         <UserInfoView />
         <AtList>
           <AtListItem
