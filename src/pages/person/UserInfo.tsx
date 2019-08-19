@@ -4,26 +4,42 @@
 
 import Taro, { Component } from '@tarojs/taro'
 import { View, Image, Button } from '@tarojs/components'
-import { WXUserInfo } from '../../types/UserInofIF'
+import { UserInfo as UserInfoIF } from '../../types/UserInofIF'
 import './UserInfo.less'
 import DEFAULT_AVATOR from '../../assets/images/person/no-user-avator.svg'
+import { MineStore } from '../../store/mine'
+import { inject, observer } from '@tarojs/mobx'
 
 interface State {
-  userInfo: WXUserInfo | undefined
+  userInfo: UserInfoIF | undefined
 }
 
-export default class UserInfo extends Component<{}, State> {
-  constructor() {
-    super()
+interface Props {
+  mineStore: MineStore
+}
+
+@inject('mineStore')
+@observer
+export default class UserInfo extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+
     this.state = {
       userInfo: undefined
     }
   }
 
+  componentDidMount() {
+    this.props.mineStore.getUserInfo().then(userInfo => {
+      this.setState({ userInfo })
+    })
+  }
+
   handleLogin = () => {
     Taro.getUserInfo().then(
       value => {
-        this.setState({ userInfo: value.userInfo })
+        this.setState({ userInfo: value.userInfo as UserInfoIF })
+        return this.props.mineStore.updateUserInfo(value.userInfo as UserInfoIF)
       },
       reason => {
         console.log(reason)

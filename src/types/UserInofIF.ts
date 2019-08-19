@@ -13,9 +13,6 @@ export interface UserLoginIF {
 export interface UserInfo {
   token: string
   userId: string
-}
-
-export interface WXUserInfo {
   /**
    * 用户昵称
    */
