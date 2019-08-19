@@ -7,10 +7,11 @@ import { View } from '@tarojs/components'
 import { ReactText } from 'react'
 import { inject, observer } from '@tarojs/mobx'
 import { MineStore } from '../../store/mine'
-import { AtButton, AtForm, AtInput } from 'taro-ui'
+import { AtForm, AtInput } from 'taro-ui'
 import './AddCompanyInvoiceInfo.less'
 import { updateCompanyInvoiceInfo, getCompanyInfoList, deleteCompanyInfoById } from '../../dataManager/Actions'
 import { CompanyInvoiceIF, CompanyInvoiceRespomseIF } from '../../types/CompanyInvoiceIF'
+import AIButton from '../../components/AIButton'
 
 interface ValueIF {
   value: ReactText
@@ -200,18 +201,19 @@ export default class AddCompanyInvoiceInfo extends Component<Props, State> {
         </AtForm>
         <View className="at-row at-row__justify--around action">
           {invoiceInfo.id ? (
-            <AtButton className={`at-col ${btnCls} action_del_btn`} type={'primary'} onClick={this.handleDelete}>
-              删除
-            </AtButton>
+            <AIButton
+              className={`at-col ${btnCls} action_del_btn`}
+              type={'primary'}
+              onClick={this.handleDelete}
+              title={'删除'}
+            />
           ) : null}
-          <AtButton
+          <AIButton
             className={`at-col ${btnCls} action_btn`}
-            formType="submit"
             type={'primary'}
             onClick={this.handleSubmit}
-          >
-            保存
-          </AtButton>
+            title={'保存'}
+          />
         </View>
       </View>
     )

@@ -4,7 +4,7 @@
 
 import Taro, { Component } from '@tarojs/taro'
 import { Picker, View } from '@tarojs/components'
-import { AtInput, AtForm, AtButton } from 'taro-ui'
+import { AtInput, AtForm } from 'taro-ui'
 import { ReactText } from 'react'
 import { inject, observer } from '@tarojs/mobx'
 import moment from 'moment'
@@ -14,6 +14,7 @@ import Fetch from '../../dataManager/FetchTaro'
 import { URL_Invoice_Query } from '../../constants/UrlDefine'
 import { InvoiceIF } from '../../types/InvoiceIF'
 import { USER_ID } from '../../constants/DevConfig'
+import AIButton from '../../components/AIButton'
 
 interface ValueIF {
   value: ReactText
@@ -36,6 +37,10 @@ interface State {
 @inject('invoiceStore')
 @observer
 export default class InputInvoice extends Component<Props, State> {
+  static options = {
+    addGlobalClass: true
+  }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -187,12 +192,8 @@ export default class InputInvoice extends Component<Props, State> {
           })}
         </AtForm>
         <View className="at-row at-row__justify--around action">
-          <AtButton className="at-col at-col-5" formType="reset" onClick={this.handleReset}>
-            重置
-          </AtButton>
-          <AtButton className="at-col at-col-5" formType="submit" type={'primary'} onClick={this.handleSubmit}>
-            提交
-          </AtButton>
+          <AIButton onClick={this.handleReset} title={'重置'} type={'secondary'} />
+          <AIButton onClick={this.handleSubmit} title={'提交'} type={'primary'} />
         </View>
       </View>
     )
