@@ -32,8 +32,6 @@ export default class OCRInvoice extends Component<Props, State> {
     this.state = { uploadList: [], dataSource: [] }
   }
 
-  componentDidMount() {}
-
   fnGenerateFileName = () => {
     const random = Math.floor(Math.random() * 1000) + 1
     const now = Date.now()

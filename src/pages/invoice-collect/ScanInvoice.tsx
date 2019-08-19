@@ -3,38 +3,50 @@
  */
 
 import Taro, { Component } from '@tarojs/taro'
-import { View } from '@tarojs/components'
 import { qrInvoice } from '../../dataManager/Actions'
+import { inject, observer } from '@tarojs/mobx'
+import { InvoiceStore } from '../../store/invoice'
+import { HomeInvoiceListIF, InvoiceIF } from '../../types/InvoiceIF'
+import { formatInvoice } from '../../lib/InvoiceFormat'
+import HomeCard from '../../components/HomeCard'
 
-export default class ScanInvoice extends Component {
-  constructor() {
-    super()
+interface Props {
+  invoiceStore: InvoiceStore
+}
 
+interface State {
+  dataSource: HomeInvoiceListIF
+}
+
+@inject('invoiceStore')
+@observer
+export default class ScanInvoice extends Component<Props, State> {
+  state = {
+    dataSource: {} as HomeInvoiceListIF
+  }
+
+  componentDidMount() {
+    const code = this.$router.params.code
     qrInvoice({
-      qrcode: '01,10,011001900311,26105568,356.60,20190602,69609999443421834136,C348',
+      qrcode: code,
       captcha: '',
       time: '',
       token: '',
       checkCode: '',
       invoiceDate: ''
-    }).then(res => {
-      console.log(res)
+    }).then((res: InvoiceIF) => {
+      return this.props.invoiceStore.saveInvoceData([res]).then(() => {
+        const dataSource = formatInvoice(res)
+        this.setState({ dataSource })
+      })
     })
-
-    // Taro.scanCode({
-    //   onlyFromCamera: true
-    // }).then(
-    //   result => {
-    //     if (result.result) {
-    //     }
-    //   },
-    //   reason => {
-    //     console.log(reason)
-    //   }
-    // )
   }
 
   render() {
-    return <View />
+    const { dataSource } = this.state
+    if (!dataSource.id) {
+      return null
+    }
+    return <HomeCard key={dataSource.id} homeModel={dataSource} />
   }
 }

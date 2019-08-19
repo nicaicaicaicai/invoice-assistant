@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93cbec58-d460-44a8-9cfa-4fe2569f769e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AIButton.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AIButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/InvoiceUtil.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/invoice-collect/InputInvoice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/invoice-collect/InputInvoice.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/invoice-collect/OCRInvoice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/invoice-collect/OCRInvoice.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/invoice-collect/ScanInvoice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/invoice-collect/ScanInvoice.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,18 +20,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/HomeCard.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="86" column="44" lean-forward="true" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
-              <folding>
-                <element signature="e#332#375#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/invoice-collect/InputInvoice.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
@@ -43,55 +28,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="209" column="19" lean-forward="true" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
-              <folding>
-                <element signature="e#48#94#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/AIButton.tsx">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="43" />
+              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding>
                 <element signature="e#48#94#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/AIButton.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/HomeCard.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/person/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-              <folding>
-                <element signature="e#48#94#0" expanded="true" />
+                <element signature="e#3346#4484#0" />
               </folding>
             </state>
           </provider>
@@ -100,10 +44,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+            <state relative-caret-position="230">
+              <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
               <folding>
                 <element signature="e#48#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/InvoiceUtil.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding>
+                <element signature="e#47#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,11 +77,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/invoice-collect/OCRInvoice.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="160" column="24" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
+            <state relative-caret-position="2500">
+              <caret line="111" column="2" selection-start-line="111" selection-start-column="2" selection-end-line="111" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/invoice-collect/ScanInvoice.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="16" />
+              <folding>
+                <element signature="e#48#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/types/InvoiceIF.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -137,15 +114,13 @@
       <list>
         <option value="TypeScript File" />
         <option value="TypeScriptX" />
-        <option value="Typescript" />
         <option value="TaroTS" />
+        <option value="Typescript" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Taro.navigateTo</find>
-      <find>buildOptions</find>
       <find>handleCreateCorpInfo</find>
       <find>i18n</find>
       <find>)</find>
@@ -174,6 +149,8 @@
       <find>taro</find>
       <find>home_list</find>
       <find>classnames</find>
+      <find>Taro.navigateTo</find>
+      <find>this.$router.params</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -186,8 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pages/person/CompanyInvoceList.less" />
-        <option value="$PROJECT_DIR$/src/constants/DevConfig.ts" />
         <option value="$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.less" />
         <option value="$PROJECT_DIR$/src/dataManager/FetchTaro.ts" />
         <option value="$PROJECT_DIR$/src/store/mine.ts" />
@@ -195,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/pages/person/CompanyInvoceList.tsx" />
         <option value="$PROJECT_DIR$/src/constants/UrlDefine.ts" />
         <option value="$PROJECT_DIR$/src/dataManager/Actions.ts" />
-        <option value="$PROJECT_DIR$/src/pages/invoice-collect/ScanInvoice.tsx" />
         <option value="$PROJECT_DIR$/src/pages/invoice-detail/PayerInfo.less" />
         <option value="$PROJECT_DIR$/src/pages/invoice-detail/utils.ts" />
         <option value="$PROJECT_DIR$/src/lib/MoneyUtil.ts" />
@@ -230,13 +204,16 @@
         <option value="$PROJECT_DIR$/src/pages/person/index.less" />
         <option value="$PROJECT_DIR$/src/pages/main/index.tsx" />
         <option value="$PROJECT_DIR$/src/pages/main/index.less" />
-        <option value="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" />
         <option value="$PROJECT_DIR$/src/pages/person/About.tsx" />
         <option value="$PROJECT_DIR$/src/components/HomeCard.tsx" />
         <option value="$PROJECT_DIR$/src/components/AIButton.tsx" />
         <option value="$PROJECT_DIR$/src/components/AIButton.less" />
         <option value="$PROJECT_DIR$/src/pages/invoice-collect/InputInvoice.tsx" />
         <option value="$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/invoice-collect/ScanInvoice.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx" />
+        <option value="$PROJECT_DIR$/src/lib/InvoiceUtil.ts" />
+        <option value="$PROJECT_DIR$/src/pages/invoice-collect/OCRInvoice.tsx" />
       </list>
     </option>
   </component>
@@ -270,12 +247,6 @@
               <item name="invoice-assistant" type="b2602c69:ProjectViewProjectNode" />
               <item name="invoice-assistant" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="invoice-assistant" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoice-assistant" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -283,7 +254,7 @@
               <item name="invoice-assistant" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="person" type="462c0819:PsiDirectoryNode" />
+              <item name="invoice-collect" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -366,7 +337,7 @@
       <workItem from="1564367373933" duration="12833000" />
       <workItem from="1564484333511" duration="942000" />
       <workItem from="1565858492946" duration="17524000" />
-      <workItem from="1566181105066" duration="7434000" />
+      <workItem from="1566181105066" duration="11065000" />
     </task>
     <task id="LOCAL-00001" summary="增加homelist">
       <created>1562656620855</created>
@@ -550,11 +521,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566186791050</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="优化---001">
+      <created>1566197324841</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1566197324841</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223113000" />
+    <option name="totallyTimeSpent" value="226744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="0" width="2304" height="1296" extended-state="0" />
@@ -586,7 +564,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="增加homelist" />
     <MESSAGE value="增加书录发票界面" />
     <MESSAGE value="增加token" />
     <MESSAGE value="input invoice" />
@@ -611,34 +588,10 @@
     <MESSAGE value="详情页---beta003" />
     <MESSAGE value="详情页---beta004" />
     <MESSAGE value="优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化" />
+    <MESSAGE value="优化---001" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化---001" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pages/invoice-detail/ticketConfig.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8700">
-          <caret line="415" column="20" selection-start-line="415" selection-start-column="20" selection-end-line="415" selection-end-column="20" />
-          <folding>
-            <element signature="e#79#1255#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/DevConfig.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/types/UserInfoIF.ts" />
-    <entry file="file://$PROJECT_DIR$/node_modules/@tarojs/components/types/View.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.temp/pages/invoice-detail/InvoiceContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -743,13 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@tarojs/taro/types/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="490" column="12" selection-start-line="490" selection-start-column="12" selection-end-line="490" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -861,33 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-          <folding>
-            <element signature="e#48#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/person/About.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="e#48#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/invoice-collect/OCRInvoice.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="160" column="24" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/taro-ui/dist/weapp/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -966,11 +885,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/person/AddCompanyInvoiceInfo.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="209" column="19" lean-forward="true" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
+        <state relative-caret-position="375">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="e#48#94#0" expanded="true" />
+            <element signature="e#3346#4484#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/person/About.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding>
             <element signature="e#48#94#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/types/InvoiceIF.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@tarojs/mobx/types/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@tarojs/taro/types/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="7161" column="45" selection-start-line="7161" selection-start-column="45" selection-end-line="7161" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/InvoiceUtil.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="e#47#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/invoice-collect/ScanInvoice.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="16" />
+          <folding>
+            <element signature="e#48#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/main/HomeActionSheet.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+          <folding>
+            <element signature="e#48#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/invoice-collect/OCRInvoice.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2500">
+          <caret line="111" column="2" selection-start-line="111" selection-start-column="2" selection-end-line="111" selection-end-column="2" />
         </state>
       </provider>
     </entry>

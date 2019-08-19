@@ -9,14 +9,18 @@ import AIIcon from '../../components/AIIcon'
 import './HomeActionSheet.less'
 import { inject, observer } from '@tarojs/mobx'
 import { MineStore } from '../../store/mine'
+import { InvoiceStore } from '../../store/invoice'
+import { scanInvoice } from '../../lib/InvoiceUtil'
+import { InvoiceIF } from '../../types/InvoiceIF'
 
 interface Props {
   isOpened: boolean
   mineStore?: MineStore
+  invoiceStore?: InvoiceStore
   onAction: (action: string) => void
 }
 
-@inject('mineStore')
+@inject('mineStore', 'invoiceStore')
 @observer
 export default class HomeActionSheet extends Component<Props> {
   actions: ActionModal[]
@@ -33,6 +37,12 @@ export default class HomeActionSheet extends Component<Props> {
 
   handleClick = (action: ActionModal) => {
     this.props.onAction(action.actionType)
+    if (action.actionType === 'scan_invoice') {
+      return scanInvoice().then((res: InvoiceIF) => {
+        console.log(res)
+        this.props.invoiceStore && this.props.invoiceStore.saveInvoceData([res])
+      })
+    }
     return Taro.navigateTo({
       url: `/pages/invoice-collect/${action.page}`
     })
@@ -61,7 +71,7 @@ export default class HomeActionSheet extends Component<Props> {
 }
 
 interface ActionModal {
-  actionType: string
+  actionType: 'scan_invoice' | 'ocr' | 'shoulu'
   title: string
   icon: string
   page: string
