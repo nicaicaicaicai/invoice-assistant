@@ -3,11 +3,16 @@
  */
 
 import Taro, { Component } from '@tarojs/taro'
+import { View } from '@tarojs/components'
+import './InvoiceDetail.less'
 import { PayerInfoNumber, PayerInfoName } from './PayerInfo'
-import { InvoiceItem, SeparationLine, InvoiceMoney, InvoiceDetail, TotalView } from './InvoiceContainer'
+import SeparationLine from './SeparationLine'
+import InvoiceMoney from './InvoiceMoney'
+import InvoiceItem from './InvoiceItem'
+import InvoiceDetail from './InvoiceDetail'
+import TotalView from './TotalView'
 import { formatInvoiceData } from './FormatInvoiceData'
 import SVG_STAMP from '../../assets/images/invoice-detail/fp-stamp.svg'
-import './InvoiceDetail.less'
 import { inject, observer } from '@tarojs/mobx'
 import { InvoiceStore } from '../../store/invoice'
 import { InvoiceIF } from '../../types/InvoiceIF'
@@ -42,10 +47,23 @@ export default class InvoiceDetailView extends Component<Props, State> {
     Taro.showToast(message)
   }
 
-  renderItem = (item, index) => {
+  renderItem(item) {
     const { type, label, value, isShow } = item
-    const InvoiceComponent = componentMap[type] || InvoiceItem
-    return <InvoiceComponent key={index} value={value} label={label} isShow={isShow} {...this.props} />
+    if (type === 'separationLine') {
+      return <SeparationLine value={value} label={label} isShow={isShow} {...this.props} />
+    }
+    if (type === 'money') {
+      return <InvoiceMoney value={value} label={label} isShow={isShow} {...this.props} />
+    }
+    if (type === 'list') {
+      return <InvoiceDetail value={value} label={label} isShow={isShow} {...this.props} />
+    }
+    if (type === 'total') {
+      return <TotalView value={value} label={label} isShow={isShow} {...this.props} />
+    }
+    return <InvoiceItem value={value} label={label} isShow={isShow} {...this.props} />
+    // const InvoiceComponent = componentMap[type] || InvoiceItem
+    // return <InvoiceComponent value={value} label={label} isShow={isShow} {...this.props} />
   }
 
   render() {
@@ -67,18 +85,21 @@ export default class InvoiceDetailView extends Component<Props, State> {
       status = invoiceInfo.status
     }
 
+    const content = items.map((item, index) => {
+      return <View key={String(index)}>{this.renderItem(item)}</View>
+    })
     return (
-      <div className={'invoice-detail-wrapper'}>
-        <div className="invoice-content">
-          <div className="header">
-            <div className="stamp_big">
+      <View className="invoice-detail-wrapper">
+        <View className="invoice-content">
+          <View className="header">
+            <View className="stamp_big">
               <img src={SVG_STAMP} />
-            </div>
-            <div className="title">{title}</div>
-          </div>
-          <div className="line" />
-          <div className="line mt-1" />
-          <div className="detail">
+            </View>
+            <View className="title">{title}</View>
+          </View>
+          <View className="line" />
+          <View className="line mt-1" />
+          <View className="detail">
             <PayerInfoName
               title={buyer.label}
               status={status}
@@ -95,19 +116,17 @@ export default class InvoiceDetailView extends Component<Props, State> {
               payerInfo={payerInfo}
               message={message}
             />
-            {items.map((item, index) => {
-              return this.renderItem(item, index)
-            })}
-          </div>
-        </div>
-      </div>
+            {content}
+          </View>
+        </View>
+      </View>
     )
   }
 }
 
-const componentMap = {
-  separationLine: SeparationLine,
-  money: InvoiceMoney,
-  list: InvoiceDetail,
-  total: TotalView
-}
+// const componentMap = {
+//   separationLine: SeparationLine,
+//   money: InvoiceMoney,
+//   list: InvoiceDetail,
+//   total: TotalView
+// }

@@ -55,6 +55,9 @@ const config = {
           }
         }
       }
+    },
+    setting: {
+      checkSiteMap: false
     }
   },
   h5: {

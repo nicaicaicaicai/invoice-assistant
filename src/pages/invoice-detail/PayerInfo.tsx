@@ -14,15 +14,15 @@ export function PayerInfoName(props) {
   const { invoiceDetail, showTitleMessage, payerInfo, title, message, status } = props
   if (invoiceDetail.payer === '个人') {
     return (
-      <div className={'payerinfo-wrapper'}>
-        <div className="payerinfo-content">
-          <div className="label">{title}</div>
-          <div className="value">
-            <span>{'个人'}</span>
+      <View className={'payerinfo-wrapper'}>
+        <View className="payerinfo-content">
+          <View className="label">{title}</View>
+          <View className="value">
+            <View>{'个人'}</View>
             <img className="ml-5" src={SVG_RIGHT} />
-          </div>
-        </div>
-      </div>
+          </View>
+        </View>
+      </View>
     )
   }
   const payerInfoArr = payerInfo
@@ -47,23 +47,23 @@ export function PayerInfoName(props) {
     payeeImg = checkPayerName === false ? STATUS_IMG['NO_RESULT'] : STATUS_IMG[status]
   }
   return (
-    <div className={'payerinfo-wrapper'}>
-      <div className="payerinfo-content">
-        <div className="label">{title}</div>
-        <div className="value">
-          <div className={checkPayerName ? '' : 'color-red-6 flex'} onClick={() => showTitleMessage(payeeTip)}>
+    <View className={'payerinfo-wrapper'}>
+      <View className="payerinfo-content">
+        <View className="label">{title}</View>
+        <View className="value">
+          <View className={checkPayerName ? '' : 'color-red-6 flex'} onClick={() => showTitleMessage(payeeTip)}>
             <span>{invoiceDetail.payer}</span>
             <img className="ml-5" src={payeeImg} />
-          </div>
+          </View>
           {checkPayerName && isNumberError && (
-            <div className="warning-text">
+            <View className="warning-text">
               <View className="mr-5">{'对应税号'}</View>
               {sameNameObj && sameNameObj.payerNo}
-            </div>
+            </View>
           )}
-        </div>
-      </div>
-    </div>
+        </View>
+      </View>
+    </View>
   )
 }
 
@@ -76,17 +76,17 @@ export function PayerInfoNumber(props) {
 
   if (invoiceDetail.payer === '个人') {
     return (
-      <div className={'payerinfo-wrapper'}>
-        <div className="payerinfo-content">
-          <div className="label">{title}</div>
+      <View className={'payerinfo-wrapper'}>
+        <View className="payerinfo-content">
+          <View className="label">{title}</View>
           {payertaxno && (
-            <div className="value">
+            <View className="value">
               <span>{payertaxno}</span>
               <img className="ml-5" src={SVG_RIGHT} />
-            </div>
+            </View>
           )}
-        </div>
-      </div>
+        </View>
+      </View>
     )
   }
   const payerInfoArr = payerInfo
@@ -119,22 +119,22 @@ export function PayerInfoNumber(props) {
   }
 
   return (
-    <div className={'payerinfo-wrapper'}>
-      <div className="payerinfo-content payerInfo-number">
-        <div className="label">{title}</div>
-        <div className="value value-number">
-          <div onClick={() => showMessage(payeeTip)} className={!!checkPayerNumber ? 'flex' : 'color-red'}>
+    <View className={'payerinfo-wrapper'}>
+      <View className="payerinfo-content payerInfo-number">
+        <View className="label">{title}</View>
+        <View className="value value-number">
+          <View onClick={() => showMessage(payeeTip)} className={!!checkPayerNumber ? 'flex' : 'color-red'}>
             {checkPayerNumber === 'no' ? '无法获取' : payertaxno}
             <img className="ml-5" src={payeeImg} />
-          </div>
+          </View>
           {checkPayerNumber && checkPayerNumber !== 'no' && isNameError && (
-            <div className="warning-text">
+            <View className="warning-text">
               <View className="mr-5">{'对应购买方'}</View>
               {sameNumberObj && sameNumberObj.name}
-            </div>
+            </View>
           )}
-        </div>
-      </div>
-    </div>
+        </View>
+      </View>
+    </View>
   )
 }

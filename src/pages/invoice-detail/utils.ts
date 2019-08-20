@@ -55,3 +55,11 @@ export function checkPayerInfo(payerInfo) {
 export function isMoneyObject(obj) {
   return obj && typeof obj === 'object' && obj.standard
 }
+
+export interface InvoiceItemIF {
+  label: string
+  value: string | any
+  isShow: boolean
+  sourcePage?: string
+  onItemClick?: () => void
+}

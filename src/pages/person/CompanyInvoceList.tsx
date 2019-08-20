@@ -49,7 +49,7 @@ export default class CompanyInvoceList extends Component<Props> {
     )
   }
 
-  renderCompanyBaseInfo = componyInvoiceInfo => {
+  renderCompanyBaseInfo(componyInvoiceInfo) {
     let keys = Object.keys(componyInvoiceInfo)
     keys = keys.filter(key => !!titleBoxObj[key])
     return (

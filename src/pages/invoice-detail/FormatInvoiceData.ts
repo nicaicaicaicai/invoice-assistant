@@ -28,7 +28,7 @@ function formatData({ data }) {
   const { form } = master
   let id = 'system_发票主体'
   return {
-    title: INVOICE_TYPE[form[`E_${id}_发票类别`]],
+    title: INVOICE_TYPE[form[`E_${id}_发票类别`]] || INVOICE_TYPE.PAPER_NORMAL,
     hasPdf: form[`E_${id}_来源`] === 'UPLOAD',
     message,
     status,

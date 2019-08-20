@@ -41,7 +41,7 @@ export class SeparationLine extends Component<InvoiceItemIF> {
 }
 
 export class InvoiceMoney extends Component<InvoiceItemIF> {
-  render(): any {
+  render() {
     const { value, label } = this.props
     const isMoney = isMoneyObject(value) ? true : Number(value)
     return (
@@ -60,7 +60,7 @@ export class InvoiceMoney extends Component<InvoiceItemIF> {
 }
 
 export class InvoiceDetail extends Component<InvoiceItemIF> {
-  render(): any {
+  render() {
     const { label, value, onItemClick, sourcePage } = this.props
     if (!value) return null
     return (
@@ -85,7 +85,7 @@ export class InvoiceDetail extends Component<InvoiceItemIF> {
 }
 
 export class InvoiceDetailItem extends Component<any> {
-  render(): any {
+  render() {
     const { line, index, onItemClick, sourcePage } = this.props
     const re = new RegExp(`^(-?([1-9]\\d*)|0)(\\.\\d*)?$`)
     const taxRate = line.taxRate ? (Number(line.taxRate) >= 0 ? line.taxRate + '%' : line.taxRate) : ''
@@ -120,7 +120,7 @@ export class InvoiceDetailItem extends Component<any> {
 }
 
 export class TotalView extends Component<InvoiceItemIF> {
-  render(): any {
+  render() {
     const { label, value } = this.props
     if (!value) return
     return (
@@ -139,8 +139,11 @@ export class TotalView extends Component<InvoiceItemIF> {
 }
 
 export class TotalItemView extends Component<any> {
-  render(): any {
+  render() {
     const { line } = this.props
+    if (!line) {
+      return null
+    }
     return (
       <View className="projectDetail">
         <View className="item">

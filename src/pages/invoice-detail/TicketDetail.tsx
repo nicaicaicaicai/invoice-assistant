@@ -18,31 +18,32 @@ interface State {
   data: InvoiceIF
 }
 
-interface IView {
-  field: IField
-  data: InvoiceIF
-}
+// interface IView {
+//   field: IField
+//   data: InvoiceIF
+// }
 
-function TicketTextView(props: IView) {
-  const { field, data } = props
-  return (
-    <View className="ticket_item">
-      <Text className="label">{field.label}</Text>
-      <Text className="value">{data.master.form[field.name]}</Text>
-    </View>
-  )
-}
-
-function MoneyView(props: IView) {
-  const { field, data } = props
-  const money = data.master.form[field.name] as MoneyIF
-  return (
-    <View className="ticket_item">
-      <Text className="label">{field.label}</Text>
-      <Text className="value">{Number(money.standard).toFixed(money.standardScale)}</Text>
-    </View>
-  )
-}
+// function TicketTextView(props: IView) {
+//   const { field, data } = props
+//   debugger
+//   return (
+//     <View className="ticket_item">
+//       <Text className="label">{field.label}</Text>
+//       <Text className="value">{data.master.form[field.name]}</Text>
+//     </View>
+//   )
+// }
+//
+// function MoneyView(props: IView) {
+//   const { field, data } = props
+//   const money = data.master.form[field.name] as MoneyIF
+//   return (
+//     <View className="ticket_item">
+//       <Text className="label">{field.label}</Text>
+//       <Text className="value">{Number(money.standard).toFixed(money.standardScale)}</Text>
+//     </View>
+//   )
+// }
 
 @inject('invoiceStore')
 @observer
@@ -51,6 +52,25 @@ export default class TicketDetail extends Component<Props, State> {
     super(props)
     const data = props.invoiceStore.getInvoiceById(this.$router.params.id)
     this.state = { data }
+  }
+
+  renderTicketView(data, field) {
+    return (
+      <View className="ticket_item">
+        <Text className="label">{field.label}</Text>
+        <Text className="value">{data.master.form[field.name]}</Text>
+      </View>
+    )
+  }
+
+  renderMoneyView(data, field) {
+    const money = data.master.form[field.name] as MoneyIF
+    return (
+      <View className="ticket_item">
+        <Text className="label">{field.label}</Text>
+        <Text className="value">{Number(money.standard).toFixed(money.standardScale)}</Text>
+      </View>
+    )
   }
 
   render() {
@@ -62,6 +82,7 @@ export default class TicketDetail extends Component<Props, State> {
     if (!fields.length) {
       return null
     }
+
     return (
       <View className="ticket_detail">
         <View className="ticket_detail_header">
@@ -72,14 +93,8 @@ export default class TicketDetail extends Component<Props, State> {
             const { type } = f
             return (
               <View key={index}>
-                {type === 'money' && <MoneyView data={data} field={f} />}
-                {type === 'text' && <TicketTextView data={data} field={f} />}
-                {/*{*/}
-                {/*{*/}
-                {/*text: <TicketTextView data={data} field={f} />,*/}
-                {/*money: <MoneyView data={data} field={f} />*/}
-                {/*}[type]*/}
-                {/*}*/}
+                {type === 'money' && this.renderMoneyView(data, f)}
+                {type === 'text' && this.renderTicketView(data, f)}
               </View>
             )
           })}
