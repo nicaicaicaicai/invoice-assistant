@@ -5,6 +5,7 @@ import { observable, action } from 'mobx'
 import { CompanyInvoiceIF } from '../types/CompanyInvoiceIF'
 import { getStorage, updateStorage } from '../dataManager/AIStore'
 import { UserInfo } from '../types/UserInofIF'
+import Taro from '@tarojs/taro'
 
 const COMPANY_INVOICE_LIST = 'company_invoice_list'
 const ADD_BUTTON_CONFIG = 'add_button_config'
@@ -18,7 +19,7 @@ export class MineStore {
   addButtonConfig: String[]
 
   @observable
-  userInfo: UserInfo
+  userInfo: UserInfo | null
 
   constructor() {
     this.companyInvoiceList = []
@@ -41,7 +42,10 @@ export class MineStore {
   }
 
   @action
-  getCompanyInvoiceById(id: string): CompanyInvoiceIF {
+  getCompanyInvoiceById(id: string): CompanyInvoiceIF | null {
+    if (!this.companyInvoiceList) {
+      return null
+    }
     return this.companyInvoiceList.find(line => line.id === id) as CompanyInvoiceIF
   }
 
@@ -73,6 +77,12 @@ export class MineStore {
   @action
   updateUserInfo(userInfo: UserInfo) {
     return updateStorage(USER_INFO, JSON.stringify(userInfo))
+  }
+
+  @action
+  clearCache() {
+    Taro.clearStorage()
+    this.userInfo = null
   }
 }
 

@@ -7,11 +7,29 @@ import { View } from '@tarojs/components'
 import { AtList, AtListItem } from 'taro-ui'
 import UserInfoView from './UserInfo'
 import './index.less'
+import { inject, observer } from '@tarojs/mobx'
+import { MineStore } from '../../store/mine'
 
-export default class Person extends Component {
+interface Props {
+  mineStore: MineStore
+}
+
+@inject('mineStore')
+@observer
+export default class Person extends Component<Props> {
   handleListItemClick = url => {
     return Taro.navigateTo({
       url
+    })
+  }
+
+  handleClearCache = () => {
+    Taro.showModal({
+      title: '确定清除?',
+      content: '清除缓存',
+      success: () => {
+        this.props.mineStore.clearCache()
+      }
     })
   }
 
@@ -31,6 +49,11 @@ export default class Person extends Component {
             arrow="right"
             thumb="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
             onClick={() => this.handleListItemClick('/pages/person/AddButtonConfig')}
+          />
+          <AtListItem
+            title="清除缓存"
+            thumb="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
+            onClick={this.handleClearCache}
           />
           <AtListItem
             title="关于"

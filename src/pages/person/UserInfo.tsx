@@ -15,7 +15,7 @@ interface State {
 }
 
 interface Props {
-  mineStore: MineStore
+  mineStore?: MineStore
 }
 
 @inject('mineStore')
@@ -30,16 +30,17 @@ export default class UserInfo extends Component<Props, State> {
   }
 
   componentDidMount() {
-    this.props.mineStore.getUserInfo().then(userInfo => {
-      this.setState({ userInfo })
-    })
+    this.props.mineStore &&
+      this.props.mineStore.getUserInfo().then(userInfo => {
+        this.setState({ userInfo })
+      })
   }
 
   handleLogin = () => {
     Taro.getUserInfo().then(
       value => {
         this.setState({ userInfo: value.userInfo as UserInfoIF })
-        return this.props.mineStore.updateUserInfo(value.userInfo as UserInfoIF)
+        return this.props.mineStore && this.props.mineStore.updateUserInfo(value.userInfo as UserInfoIF)
       },
       reason => {
         console.log(reason)

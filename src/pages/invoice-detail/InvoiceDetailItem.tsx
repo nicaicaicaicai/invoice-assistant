@@ -12,6 +12,9 @@ import './PayerInfo.less'
 export default class InvoiceDetailItem extends Component<any> {
   render() {
     const { line, index, onItemClick, sourcePage } = this.props
+    if (!line) {
+      return null
+    }
     const re = new RegExp(`^(-?([1-9]\\d*)|0)(\\.\\d*)?$`)
     const taxRate = line.taxRate ? (Number(line.taxRate) >= 0 ? line.taxRate + '%' : line.taxRate) : ''
     const isMoney = isMoneyObject(line.tax) ? true : re.test(line.tax)
